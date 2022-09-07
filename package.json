@@ -17,9 +17,11 @@
     "release": "turbo run build --filter=!@quantun/docs && changeset publish"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "eslint-config-quantun": "*",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@changesets/cli": "^2.24.4",
+    "eslint": "^8.23.0"
   },
   "engines": {
     "node": ">=14.0.0"

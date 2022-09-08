@@ -1,73 +1,92 @@
-# Turborepo starter
+# Quantun
 
-This is an official Yarn v1 starter turborepo.
+O Quantun é um monorepo para o gerenciamento de projetos utilizando React e Typescript.
 
-## What's inside?
+## Tecnologias
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+O Quantun utiliza as seguintes tecnologias:
 
-### Apps and Packages
+- [Turborepo](https://turborepo.org/) - Gerenciador de monorepo
+- [React](https://reactjs.org/) - Biblioteca para criação de interfaces
+- [Typescript](https://www.typescriptlang.org/) - Adiciona tipagem estática ao JavaScript
+- [Storybook](https://storybook.js.org/) - Biblioteca para documentação de componentes
+- [Styled Components](https://styled-components.com/) - Biblioteca para estilização de componentes
+- [Jest](https://jestjs.io/) - Biblioteca para testes unitários
+- [Prettier](https://prettier.io/) - Biblioteca para formatação de código
+- [ESLint](https://eslint.org/) - Biblioteca para análise de código
+- [Changesets](https://github.com/changesets/changesets) - Biblioteca para gerenciamento de versões
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+Além disso, o Quantun utiliza o [Yarn](https://yarnpkg.com/) como gerenciador de pacotes.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## Como utilizar
 
-### Utilities
+### Instalação
 
-This turborepo has some additional tools already setup for you:
+Para instalar as dependências do projeto, execute o comando:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+```bash
+yarn
+```
+
+### Execução
+
+Para executar e visualizar o projeto, execute o comando:
+
+```bash
+yarn dev
+```
+
+Acesse o storybook através do endereço: http://localhost:6006
+
+### Formatação
+
+Para formatar o código, execute o comando:
+
+```bash
+yarn format
+```
+
+### Clean
+
+Para limpar o projeto, execute o comando:
+
+```bash
+yarn clean
+```
+
+### Testes
+
+Para executar os testes, execute o comando:
+
+```bash
+yarn test
+```
 
 ### Build
 
-To build all apps and packages, run the following command:
+Para gerar o build do projeto, execute o comando:
 
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
+```bash
+yarn build
 ```
 
-### Remote Caching
+### Publicação
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Há duas formas de publicar o projeto:
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+- Publicação manual: Para publicar o projeto manualmente, execute o comando: `yarn release`
+- Publicação automática: Para publicar o projeto automaticamente, é necessário dar push na branch master. O Github Actions irá executar o processo de publicação.
 
-```
-cd my-turborepo
-npx turbo login
-```
+## Pacotes disponíveis
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### @quantun/core (🚧 Em desenvolvimento 🚧)
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+O pacote @quantun/core é responsável por disponibilizar os componentes básicos do Quantun.
 
-```
-npx turbo link
-```
+### @quantun/prettier 🚀
 
-## Useful Links
+O pacote @quantun/prettier é responsável por disponibilizar as configurações do Prettier.
 
-Learn more about the power of Turborepo:
+### @quantun/tsconfig 🚀
 
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+O pacote @quantun/tsconfig é responsável por disponibilizar as configurações do Typescript.

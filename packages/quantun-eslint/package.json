@@ -1,5 +1,5 @@
 {
-  "name": "@s_mart/eslint",
+  "name": "@quantun/eslint",
   "version": "1.0.0",
   "main": ".eslintrc.json",
   "sideEffects": false,

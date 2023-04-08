@@ -9,11 +9,16 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@mantine/core": "^6.0.6",
+    "@mantine/hooks": "^6.0.6",
+    "@mantine/notifications": "^6.0.6",
     "@quantun/core": "workspace:*",
     "@quantun/hooks": "workspace:*",
     "@quantun/utils": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
     "@quantun/eslint": "workspace:*",

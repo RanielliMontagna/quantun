@@ -8,7 +8,6 @@ module.exports = {
     builder: '@storybook/builder-vite',
   },
   async viteFinal(config) {
-    // customize the Vite config here
     return {
       ...config,
       resolve: {

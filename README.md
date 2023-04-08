@@ -10,13 +10,12 @@ O Quantun utiliza as seguintes tecnologias:
 - [React](https://reactjs.org/) - Biblioteca para criação de interfaces
 - [Typescript](https://www.typescriptlang.org/) - Adiciona tipagem estática ao JavaScript
 - [Storybook](https://storybook.js.org/) - Biblioteca para documentação de componentes
-- [Styled Components](https://styled-components.com/) - Biblioteca para estilização de componentes
 - [Jest](https://jestjs.io/) - Biblioteca para testes unitários
 - [Prettier](https://prettier.io/) - Biblioteca para formatação de código
 - [ESLint](https://eslint.org/) - Biblioteca para análise de código
 - [Changesets](https://github.com/changesets/changesets) - Biblioteca para gerenciamento de versões
 
-Além disso, o Quantun utiliza o [Yarn](https://yarnpkg.com/) como gerenciador de pacotes.
+Além disso, o Quantun utiliza o [PNPM](https://pnpm.io/) como gerenciador de pacotes.
 
 ## Como utilizar
 

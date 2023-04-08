@@ -7,13 +7,24 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
     "@changesets/cli": "^2.25.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/jest": "^29.5.0",
+    "@types/jest-axe": "^3.5.5",
     "eslint": "^8.29.0",
-    "eslint-config-quantun": "workspace:0.0.0",
+    "eslint-config-quantun": "workspace:*",
+    "jest": "^29.5.0",
+    "jest-axe": "^7.0.1",
+    "jest-environment-jsdom": "^29.5.0",
     "prettier": "^2.8.0",
+    "ts-node": "^10.9.1",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0"

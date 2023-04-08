@@ -4,4 +4,4 @@
 
 ### Major Changes
 
-- Lança primeira versões dos pacotes
+- Implementa eslint para padrão de formatação do projeto

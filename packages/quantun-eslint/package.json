@@ -1,6 +1,6 @@
 {
   "name": "@quantun/eslint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": ".eslintrc.json",
   "sideEffects": false,
   "license": "MIT",

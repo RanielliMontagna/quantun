@@ -1,3 +1,3 @@
-const config = require('./packages/quantun-prettier/.prettierrc');
+const config = require('./packages/quantun-prettier/.prettierrc')
 
-module.exports = config;
+module.exports = config

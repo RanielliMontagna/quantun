@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.tsx'],
@@ -7,7 +7,7 @@ module.exports = {
   core: {
     builder: '@storybook/builder-vite',
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     // customize the Vite config here
     return {
       ...config,
@@ -19,6 +19,6 @@ module.exports = {
           },
         ],
       },
-    };
+    }
   },
-};
+}

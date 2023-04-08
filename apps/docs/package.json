@@ -9,12 +9,14 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
-    "@quantun/core": "*",
+    "@quantun/core": "workspace:*",
+    "@quantun/hooks": "workspace:*",
+    "@quantun/utils": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@quantun/tsconfig": "*",
+    "@quantun/tsconfig": "workspace:*",
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-docs": "^6.5.14",
     "@storybook/addon-essentials": "^6.5.14",
@@ -22,9 +24,9 @@
     "@storybook/builder-vite": "^0.1.41",
     "@storybook/react": "^6.5.14",
     "@vitejs/plugin-react": "^1.3.2",
-    "eslint-config-quantun": "*",
-    "serve": "^13.0.2",
-    "typescript": "^4.8.2",
-    "vite": "^2.9.9"
+    "eslint-config-quantun": "workspace:*",
+    "serve": "^13.0.4",
+    "typescript": "^4.9.3",
+    "vite": "^2.9.15"
   }
 }

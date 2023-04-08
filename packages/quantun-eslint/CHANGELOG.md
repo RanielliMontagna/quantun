@@ -1,4 +1,4 @@
-# eslint-config-quantun
+# @quantun/eslint
 
 ## 1.0.0
 

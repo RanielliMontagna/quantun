@@ -11,7 +11,7 @@ yard add prettier @quantun/prettier -D
 Crie um arquivo .prettierrc na raiz do projeto e adicione o seguinte conteúdo:
 
 ```
-const config = require('./node_modules/@s_mart/prettier/.prettierrc.js');
+const config = require('./node_modules/@quantun/prettier/.prettierrc.js');
 
 module.exports = config;
 ```

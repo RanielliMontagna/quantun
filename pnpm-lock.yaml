@@ -23,8 +23,14 @@ importers:
   apps/docs:
     dependencies:
       '@quantun/core':
-        specifier: workspace:0.0.0
+        specifier: workspace:*
         version: link:../../packages/quantun-core
+      '@quantun/hooks':
+        specifier: workspace:*
+        version: link:../../packages/quantun-hooks
+      '@quantun/utils':
+        specifier: workspace:*
+        version: link:../../packages/quantun-utils
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -33,7 +39,7 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@quantun/tsconfig':
-        specifier: workspace:0.0.0
+        specifier: workspace:*
         version: link:../../packages/quantun-tsconfig
       '@storybook/addon-actions':
         specifier: ^6.5.14
@@ -57,7 +63,7 @@ importers:
         specifier: ^1.3.2
         version: 1.3.2
       eslint-config-quantun:
-        specifier: workspace:0.0.0
+        specifier: workspace:*
         version: link:../../packages/eslint-config-quantun
       serve:
         specifier: ^13.0.4
@@ -137,6 +143,8 @@ importers:
       typescript:
         specifier: ^4.5.3
         version: 4.9.3
+
+  packages/quantun-prettier: {}
 
   packages/quantun-tsconfig: {}
 

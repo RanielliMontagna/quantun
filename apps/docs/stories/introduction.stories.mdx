@@ -1,84 +1,9 @@
-import { Meta } from '@storybook/addon-docs';
-import Code from './assets/code-brackets.svg';
-import Repo from './assets/repo.svg';
+import { Meta } from '@storybook/addon-docs'
+
+import Code from './assets/code-brackets.svg'
+import Repo from './assets/repo.svg'
 
 <Meta title="Inicio/Introdução" />
-
-<style>{`
-  .subheading {
-    --mediumdark: '#999999';
-    font-weight: 900;
-    font-size: 13px;
-    color: #999;
-    letter-spacing: 6px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    margin-top: 40px;
-  }
-
-  .link-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-  }
-
-  @media (min-width: 620px) {
-    .link-list {
-      row-gap: 20px;
-      column-gap: 20px;
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media all and (-ms-high-contrast:none) {
-  .link-list {
-      display: -ms-grid;
-      -ms-grid-columns: 1fr 1fr;
-      -ms-grid-rows: 1fr 1fr;
-    }
-  }
-
-  .link-item {
-    display: block;
-    padding: 20px 30px 20px 15px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
-    color: #ffffff;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .link-item:hover {
-    border-color: #1EA7FD50;
-    transform: translate3d(0, -3px, 0);
-    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
-  }
-
-  .link-item:active {
-    border-color: #1EA7FD;
-    transform: translate3d(0, 0, 0);
-  }
-
-  .link-item strong {
-    font-weight: 700;
-    display: block;
-    margin-bottom: 2px;
-  }
-
-  .link-item img {
-    height: 40px;
-    width: 40px;
-    margin-right: 15px;
-    flex: none;
-  }
-
-  .link-item span {
-    font-size: 14px;
-    line-height: 20px;
-  }
-`}</style>
 
 # Quantun
 
@@ -92,32 +17,11 @@ O Quantun utiliza as seguintes tecnologias:
 - [React](https://reactjs.org/) - Biblioteca para criação de interfaces
 - [Typescript](https://www.typescriptlang.org/) - Adiciona tipagem estática ao JavaScript
 - [Storybook](https://storybook.js.org/) - Biblioteca para documentação de componentes
-- [Styled Components](https://styled-components.com/) - Biblioteca para estilização de componentes
 - [Jest](https://jestjs.io/) - Biblioteca para testes unitários
 - [Prettier](https://prettier.io/) - Biblioteca para formatação de código
 - [ESLint](https://eslint.org/) - Biblioteca para análise de código
 - [Changesets](https://github.com/changesets/changesets) - Biblioteca para gerenciamento de versões
 
-Além disso, o Quantun utiliza o [Yarn](https://yarnpkg.com/) como gerenciador de pacotes.
-
-<div className="subheading">Links úteis:</div>
-
-<div className="link-list">
-  {/* TODO: adiciona link para documentação */}
-  <a className="link-item" href="https://www.google.com" target="_blank">
-    <img src={Repo} alt="repo" />
-    <span>
-      <strong>Notion</strong>
-      Onde você encontra a documentação do Quantun.
-    </span>
-  </a>
-  <a className="link-item" href="https://github.com/RanielliMontagna/quantun" target="_blank">
-    <img src={Code} alt="code" />
-    <span>
-      <strong>Projeto no Github</strong>
-      Código fonte e issues do projeto
-    </span>
-  </a>
-</div>
+Além disso, o Quantun utiliza o [PNPM](https://pnpm.io/) como gerenciador de pacotes.
 
 Feito com ❤️ por [Ranielli Montagna](https://github.com/RanielliMontagna)

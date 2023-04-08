@@ -3,8 +3,5 @@
   "version": "0.0.0",
   "main": ".prettierrc.js",
   "sideEffects": false,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+  "license": "MIT"
 }

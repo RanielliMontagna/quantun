@@ -7,8 +7,6 @@ import { ItemSidebar } from './items/items'
 export function Sidebar({ logo, items, footer }: ISideBarProps) {
   const pathname = window.location.pathname
 
-  console.log(pathname)
-
   const links = items.map((item) => (
     <ItemSidebar key={item.label} {...item} active={pathname === item.path} />
   ))
@@ -30,7 +28,9 @@ export function Sidebar({ logo, items, footer }: ISideBarProps) {
         },
       })}
     >
-      <Center>{logo}</Center>
+      <Center style={{ cursor: 'pointer' }} onClick={() => (window.location.href = '/')}>
+        {logo}
+      </Center>
       <Navbar.Section grow mt={50}>
         <Stack justify="center" style={{ gap: 8 }}>
           {links}

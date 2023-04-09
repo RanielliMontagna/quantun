@@ -1,3 +1,4 @@
+import React from 'react'
 import { Tooltip, UnstyledButton } from '@mantine/core'
 
 import type { ISideBarItem } from '../sidebar.types'

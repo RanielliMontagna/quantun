@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.2
+
+### Patch Changes
+
+- faz melhoria na sidebar, exportando items e direcioandno para '/' ao clicar na logo do sistema
+
 ## 1.1.1
 
 ### Patch Changes

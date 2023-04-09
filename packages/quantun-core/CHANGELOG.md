@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.1
+
+### Patch Changes
+
+- Ajusta item da sidebar que estava sem importação do react
+
 ## 1.1.0
 
 ### Minor Changes

@@ -55,6 +55,9 @@ importers:
       '@emotion/react':
         specifier: ^11.10.6
         version: 11.10.6(@types/react@18.0.9)(react@18.2.0)
+      '@emotion/styled':
+        specifier: ^11.10.6
+        version: 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.9)(react@18.2.0)
       '@mantine/core':
         specifier: ^6.0.6
         version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.9)(react-dom@18.2.0)(react@18.2.0)
@@ -70,9 +73,15 @@ importers:
       '@quantun/hooks':
         specifier: workspace:*
         version: link:../../packages/quantun-hooks
+      '@quantun/login-screen':
+        specifier: workspace:*
+        version: link:../../templates/quantun-login-screen
       '@quantun/utils':
         specifier: workspace:*
         version: link:../../packages/quantun-utils
+      '@tabler/icons-react':
+        specifier: ^2.15.0
+        version: 2.15.0(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -226,6 +235,52 @@ importers:
       react:
         specifier: ^18.1.0
         version: 18.2.0
+      tsup:
+        specifier: ^5.10.1
+        version: 5.10.1(ts-node@10.9.1)(typescript@4.9.3)
+      typescript:
+        specifier: ^4.5.3
+        version: 4.9.3
+
+  templates/quantun-login-screen:
+    dependencies:
+      '@emotion/react':
+        specifier: '>=11.10.6'
+        version: 11.10.6(@types/react@18.0.9)(react@18.2.0)
+      '@emotion/styled':
+        specifier: '>=11.10.6'
+        version: 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.9)(react@18.2.0)
+      '@mantine/core':
+        specifier: '>=6.0.6'
+        version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.9)(react-dom@18.2.0)(react@18.2.0)
+      '@quantun/core':
+        specifier: workspace:*
+        version: link:../../packages/quantun-core
+      '@tabler/icons-react':
+        specifier: '>=2.15.0'
+        version: 2.15.0(react@18.2.0)
+      react:
+        specifier: '>=18.1.0'
+        version: 18.2.0
+      react-router-dom:
+        specifier: '>=6.10.0'
+        version: 6.10.0(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@quantun/eslint':
+        specifier: workspace:*
+        version: link:../../packages/quantun-eslint
+      '@quantun/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/quantun-tsconfig
+      '@types/react':
+        specifier: ^18.0.9
+        version: 18.0.9
+      '@types/react-dom':
+        specifier: ^18.0.4
+        version: 18.0.4
+      eslint:
+        specifier: ^8.15.0
+        version: 8.29.0
       tsup:
         specifier: ^5.10.1
         version: 5.10.1(ts-node@10.9.1)(typescript@4.9.3)
@@ -1975,6 +2030,12 @@ packages:
     resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
     dev: false
 
+  /@emotion/is-prop-valid@1.2.0:
+    resolution: {integrity: sha512-3aDpDprjM0AwaxGE09bOPkNxHpBd+kA6jty3RnaEXdweX1DF1U3VQpPYb0g1IStAuK7SVQ1cy+bNBBKp4W3Fjg==}
+    dependencies:
+      '@emotion/memoize': 0.8.0
+    dev: false
+
   /@emotion/memoize@0.8.0:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
     dev: false
@@ -2012,6 +2073,27 @@ packages:
 
   /@emotion/sheet@1.2.1:
     resolution: {integrity: sha512-zxRBwl93sHMsOj4zs+OslQKg/uhF38MB+OMKoCrVuS0nyTkqnau+BM3WGEoOptg9Oz45T/aIGs1qbVAsEFo3nA==}
+    dev: false
+
+  /@emotion/styled@11.10.6(@emotion/react@11.10.6)(@types/react@18.0.9)(react@18.2.0):
+    resolution: {integrity: sha512-OXtBzOmDSJo5Q0AFemHCfl+bUueT8BIcPSxu0EGTpGk6DmI5dnhSzQANm1e1ze0YZL7TDyAyy6s/b/zmGOS3Og==}
+    peerDependencies:
+      '@emotion/react': ^11.0.0-rc.0
+      '@types/react': '*'
+      react: '>=16.8.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@emotion/babel-plugin': 11.10.6
+      '@emotion/is-prop-valid': 1.2.0
+      '@emotion/react': 11.10.6(@types/react@18.0.9)(react@18.2.0)
+      '@emotion/serialize': 1.1.1
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
+      '@emotion/utils': 1.2.0
+      '@types/react': 18.0.9
+      react: 18.2.0
     dev: false
 
   /@emotion/unitless@0.8.0:
@@ -4364,6 +4446,20 @@ packages:
       regenerator-runtime: 0.13.11
       resolve-from: 5.0.0
     dev: true
+
+  /@tabler/icons-react@2.15.0(react@18.2.0):
+    resolution: {integrity: sha512-yE+0kskRLANxB3ulkJ4UsouvMsNA+C5y58JjWgdHX8T4pLK/9FOtFPdGmZW2Z5SodC6XZCXH/uw0PqAy1I3/JA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@tabler/icons': 2.15.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
+  /@tabler/icons@2.15.0:
+    resolution: {integrity: sha512-6fwWrsLOqmeoDPii4O1/tG1lsaNoPigUEx8UrOgTLJ81HazbAy5rfypp7FN9/PGsal4VDU+hevOkaGkE6algTQ==}
+    dev: false
 
   /@testing-library/dom@9.2.0:
     resolution: {integrity: sha512-xTEnpUKiV/bMyEsE5bT4oYA0x0Z/colMtxzUY8bKyPXBNLn/e0V4ZjBZkEhms0xE4pv9QsPfSRu9AWS4y5wGvA==}
@@ -8046,7 +8142,7 @@ packages:
       eslint-scope: 7.1.1
       eslint-utils: 3.0.0(eslint@8.4.1)
       eslint-visitor-keys: 3.4.0
-      espree: 9.2.0
+      espree: 9.5.1
       esquery: 1.5.0
       esutils: 2.0.3
       fast-deep-equal: 3.1.3

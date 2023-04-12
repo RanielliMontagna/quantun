@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.3
+
+### Patch Changes
+
+- implementa appbar para telas mobile
+
 ## 1.1.2
 
 ### Patch Changes

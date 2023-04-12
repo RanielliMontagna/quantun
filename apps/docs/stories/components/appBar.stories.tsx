@@ -1,5 +1,6 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
+
 import { AppBar, IAppBarProps, LinkAppBar, useAppBarStyles } from '@quantun/core'
 import { Box, Center, Collapse, UnstyledButton, Divider } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
@@ -17,7 +18,7 @@ export const Default: StoryObj<IAppBarProps> = {
     return (
       <AppBar
         logo={<h1>logo</h1>}
-        logoDrawer={<h2>drawer</h2>}
+        logoDrawer="drawer"
         items={
           <>
             <UnstyledButton className={classes.link} onClick={toggleLinks}>

@@ -1,13 +1,12 @@
-import React from 'react'
 import { Box, Burger, Divider, Drawer, Group, Header } from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
 
 import { useStyles } from './appBar.styles'
 import type { IAppBarProps } from './appBar.types'
+import { AppBarProvider, useAppBarContext } from './appBar.context'
 
-export function AppBar({ items, logo, logoDrawer }: IAppBarProps) {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false)
+function AppBar({ items, logo, logoDrawer }: IAppBarProps) {
   const { theme } = useStyles()
+  const { drawerOpened, toggleDrawer, closeDrawer } = useAppBarContext()
 
   return (
     <Box>
@@ -32,3 +31,13 @@ export function AppBar({ items, logo, logoDrawer }: IAppBarProps) {
     </Box>
   )
 }
+
+function AppBarWrapper(props: IAppBarProps) {
+  return (
+    <AppBarProvider>
+      <AppBar {...props} />
+    </AppBarProvider>
+  )
+}
+
+export { AppBarWrapper as AppBar }

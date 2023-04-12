@@ -2,10 +2,10 @@ import React from 'react'
 import { Box, Burger, Divider, Drawer, Group, Header } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
-import { useStyles } from './appBarMobile.styles'
-import type { IAppBarMobileProps } from './appBarMobile.types'
+import { useStyles } from './appBar.styles'
+import type { IAppBarProps } from './appBar.types'
 
-export function AppBarMobile({ items, logo, logoDrawer }: IAppBarMobileProps) {
+export function AppBar({ items, logo, logoDrawer }: IAppBarProps) {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false)
   const { theme } = useStyles()
 

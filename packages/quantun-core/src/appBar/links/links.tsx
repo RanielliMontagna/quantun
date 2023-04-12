@@ -1,9 +1,9 @@
 import { Group, Text, ThemeIcon, UnstyledButton } from '@mantine/core'
-import { useStyles } from '../appBarMobile.styles'
+import { useStyles } from '../appBar.styles'
 
-import type { ILinksAppBarMobileProps } from './links.types'
+import type { ILinksAppBarProps } from './links.types'
 
-export function LinkAppBar({ label, description, icon, onClick }: ILinksAppBarMobileProps) {
+export function LinkAppBar({ label, description, icon, onClick }: ILinksAppBarProps) {
   const { classes } = useStyles()
 
   return (

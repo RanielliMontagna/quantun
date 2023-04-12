@@ -1,9 +1,9 @@
-export interface ILinksAppBarMobileProps {
+export interface ILinksAppBarProps {
   /**
    * Label do link.
    *
    * @example
-   * <LinkAppBarMobile label="Tutoriais" />
+   * <LinkAppBar label="Tutoriais" />
    */
   label: string
 
@@ -16,7 +16,7 @@ export interface ILinksAppBarMobileProps {
    * Descrição que será exibido no link abaixo do label.
    *
    * @example
-   * <LinkAppBarMobile description="Veja como instalar o Mantine" />
+   * <LinkAppBar description="Veja como instalar o Mantine" />
    */
   description?: string
 
@@ -24,7 +24,7 @@ export interface ILinksAppBarMobileProps {
    * Função que será executada ao clicar no link.
    *
    * @example
-   * <LinkAppBarMobile onClick={() => console.log('Clicou no link')} />
+   * <LinkAppBar onClick={() => console.log('Clicou no link')} />
    */
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }

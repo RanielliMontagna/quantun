@@ -1,9 +1,9 @@
-export interface IAppBarMobileProps {
+export interface IAppBarProps {
   /**
-   * Será exibido no canto superior esquerdo do AppBarMobile e será usado como um link para a página inicial.
+   * Será exibido no canto superior esquerdo do AppBar e será usado como um link para a página inicial.
    *
    * @example
-   * <AppBarMobile logo={<img src="https://mantine.dev/logo.svg" alt="Mantine logo" />} />
+   * <AppBar logo={<img src="https://mantine.dev/logo.svg" alt="Mantine logo" />} />
    */
   logo: React.ReactNode
 
@@ -12,7 +12,7 @@ export interface IAppBarMobileProps {
    * Se não for fornecido, irá ser utilizado o logo padrão.
    *
    * @example
-   * <AppBarMobile logoDrawer={<img src="https://mantine.dev/logo.svg" alt="Mantine logo" />} />
+   * <AppBar logoDrawer={<img src="https://mantine.dev/logo.svg" alt="Mantine logo" />} />
    */
   logoDrawer?: React.ReactNode
 
@@ -20,7 +20,7 @@ export interface IAppBarMobileProps {
    * Items que serão exibidos na drawer após abrir o menu.
    *
    * @example
-   * <AppBarMobile items={[
+   * <AppBar items={[
    * <Link href="/docs/getting-started/installation" key="docs">Tutoriais</Link>,
    * ]} />
    */

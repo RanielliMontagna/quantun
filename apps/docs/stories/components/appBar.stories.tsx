@@ -1,21 +1,21 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import { AppBarMobile, IAppBarMobileProps, LinkAppBar, useAppBarStyles } from '@quantun/core'
+import { AppBar, IAppBarProps, LinkAppBar, useAppBarStyles } from '@quantun/core'
 import { Box, Center, Collapse, UnstyledButton, Divider } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 export default {
-  title: 'Components/AppBarMobile',
-  component: AppBarMobile,
-} as Meta<IAppBarMobileProps>
+  title: 'Components/AppBar',
+  component: AppBar,
+} as Meta<IAppBarProps>
 
-export const Default: StoryObj<IAppBarMobileProps> = {
+export const Default: StoryObj<IAppBarProps> = {
   render: () => {
     const { classes } = useAppBarStyles()
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(true)
 
     return (
-      <AppBarMobile
+      <AppBar
         logo={<h1>logo</h1>}
         logoDrawer={<h2>drawer</h2>}
         items={

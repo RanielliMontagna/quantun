@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.4
+
+### Patch Changes
+
+- melhora funcionamento da appbar com função onclose automatico na drawer e novo espaço customizada em telas web
+
 ## 1.1.3
 
 ### Patch Changes

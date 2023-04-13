@@ -20,9 +20,14 @@ export function LinkAppBar({ label, description, icon, onClick }: ILinksAppBarPr
         closeDrawer?.()
       }}
     >
-      <Group noWrap align="flex-start">
+      <Group noWrap align="center">
         {icon && (
-          <ThemeIcon size={34} variant="default" radius="md">
+          <ThemeIcon
+            size={34}
+            variant="default"
+            radius="md"
+            sx={(theme) => ({ color: theme.primaryColor })}
+          >
             {icon}
           </ThemeIcon>
         )}

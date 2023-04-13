@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, Burger, Divider, Drawer, Group, Header } from '@mantine/core'
 
 import { useStyles } from './appBar.styles'

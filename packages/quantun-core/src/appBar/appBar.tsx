@@ -4,7 +4,7 @@ import { useStyles } from './appBar.styles'
 import type { IAppBarProps } from './appBar.types'
 import { AppBarProvider, useAppBarContext } from './appBar.context'
 
-function AppBar({ items, logo, logoDrawer }: IAppBarProps) {
+function AppBar({ itemsDrawer, customSpace, logo, logoDrawer }: IAppBarProps) {
   const { theme } = useStyles()
   const { drawerOpened, toggleDrawer, closeDrawer } = useAppBarContext()
 
@@ -13,21 +13,24 @@ function AppBar({ items, logo, logoDrawer }: IAppBarProps) {
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           {logo}
-          <Burger opened={drawerOpened} onClick={toggleDrawer} />
+          {customSpace}
+          <div>{itemsDrawer && <Burger opened={drawerOpened} onClick={toggleDrawer} />}</div>
         </Group>
       </Header>
 
-      <Drawer
-        opened={drawerOpened}
-        onClose={closeDrawer}
-        size="100%"
-        padding="md"
-        title={logoDrawer || logo}
-        zIndex={1000000}
-      >
-        <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-        {items}
-      </Drawer>
+      {itemsDrawer && (
+        <Drawer
+          opened={drawerOpened}
+          onClose={closeDrawer}
+          size="100%"
+          padding="md"
+          title={logoDrawer || logo}
+          zIndex={1000000}
+        >
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+          {itemsDrawer}
+        </Drawer>
+      )}
     </Box>
   )
 }

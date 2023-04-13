@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 
 import { AppBar, IAppBarProps, LinkAppBar, useAppBarStyles } from '@quantun/core'
-import { Box, Center, Collapse, UnstyledButton, Divider } from '@mantine/core'
+import { Box, Center, Collapse, UnstyledButton, Divider, Group } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 export default {
@@ -19,7 +19,20 @@ export const Default: StoryObj<IAppBarProps> = {
       <AppBar
         logo={<h1>logo</h1>}
         logoDrawer="drawer"
-        items={
+        customSpace={
+          <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
+            <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
+              Home
+            </a>
+            <a href="" className={classes.link}>
+              Termos de Serviço
+            </a>
+            <a href="" className={classes.link}>
+              Política de Privacidade
+            </a>
+          </Group>
+        }
+        itemsDrawer={
           <>
             <UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>

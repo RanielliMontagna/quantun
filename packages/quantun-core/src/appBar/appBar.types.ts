@@ -17,6 +17,14 @@ export interface IAppBarProps {
   logoDrawer?: React.ReactNode
 
   /**
+   * Espaço personalizado que pode ser utilizado entre o logo e os itens. Esse espaço só será exibido em telas web.
+   *
+   * @example
+   * <AppBar customSpace={<div>Custom space</div>} />
+   */
+  customSpace?: React.ReactNode
+
+  /**
    * Items que serão exibidos na drawer após abrir o menu.
    *
    * @example
@@ -24,5 +32,5 @@ export interface IAppBarProps {
    * <Link href="/docs/getting-started/installation" key="docs">Tutoriais</Link>,
    * ]} />
    */
-  items: React.ReactNode
+  itemsDrawer?: React.ReactNode
 }

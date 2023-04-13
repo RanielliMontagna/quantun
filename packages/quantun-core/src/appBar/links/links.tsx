@@ -6,7 +6,7 @@ import { useStyles } from '../appBar.styles'
 import type { ILinksAppBarProps } from './links.types'
 import { useAppBarContext } from '../appBar.context'
 
-export function LinkAppBar({ label, description, icon, onClick }: ILinksAppBarProps) {
+export function LinkAppBar({ label, description, icon, onClick, styles }: ILinksAppBarProps) {
   const { closeDrawer } = useAppBarContext()
   const { classes } = useStyles()
 
@@ -19,6 +19,7 @@ export function LinkAppBar({ label, description, icon, onClick }: ILinksAppBarPr
         onClick?.(e)
         closeDrawer?.()
       }}
+      styles={styles}
     >
       <Group noWrap align="center">
         {icon && (

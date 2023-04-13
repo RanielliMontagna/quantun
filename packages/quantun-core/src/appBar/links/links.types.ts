@@ -27,4 +27,12 @@ export interface ILinksAppBarProps {
    * <LinkAppBar onClick={() => console.log('Clicou no link')} />
    */
   onClick: React.MouseEventHandler<HTMLButtonElement>
+
+  /**
+   * Estilos customizados que serão aplicados no link.
+   *
+   * @example
+   * <LinkAppBar styles={{ backgroundColor: 'red' }} />
+   */
+  styles?: React.CSSProperties
 }

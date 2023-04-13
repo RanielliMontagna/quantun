@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { Group, Text, ThemeIcon, UnstyledButton } from '@mantine/core'
 import { useStyles } from '../appBar.styles'
 

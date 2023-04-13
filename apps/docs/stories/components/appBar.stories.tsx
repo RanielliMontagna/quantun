@@ -34,6 +34,7 @@ export const Default: StoryObj<IAppBarProps> = {
         }
         itemsDrawer={
           <>
+            <LinkAppBar label="Home" onClick={() => console.log('Home')} />
             <UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>
                 <Box component="span" mr={5}>

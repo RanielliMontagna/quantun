@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.8
+
+### Patch Changes
+
+- Implementa melhorias na appBar
+
 ## 1.1.7
 
 ### Patch Changes

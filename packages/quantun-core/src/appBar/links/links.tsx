@@ -22,12 +22,7 @@ export function LinkAppBar({ label, description, icon, onClick }: ILinksAppBarPr
     >
       <Group noWrap align="center">
         {icon && (
-          <ThemeIcon
-            size={34}
-            variant="default"
-            radius="md"
-            sx={(theme) => ({ color: theme.primaryColor })}
-          >
+          <ThemeIcon size={34} variant="default" radius="md">
             {icon}
           </ThemeIcon>
         )}

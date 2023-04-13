@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.5
+
+### Patch Changes
+
+- ajusta links da appBar para importar o react
+
 ## 1.1.4
 
 ### Patch Changes

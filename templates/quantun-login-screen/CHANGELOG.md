@@ -1,5 +1,12 @@
 # @quantun/login-screen
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @quantun/core@1.1.7
+
 ## 1.0.2
 
 ### Patch Changes

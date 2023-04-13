@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.7
+
+### Patch Changes
+
+- Melhora estilização da appbar
+
 ## 1.1.5
 
 ### Patch Changes

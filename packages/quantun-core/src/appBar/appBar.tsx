@@ -14,8 +14,11 @@ function AppBar({ itemsDrawer, customSpace, logo, logoDrawer }: IAppBarProps) {
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           {logo}
-          {customSpace}
-          <div>{itemsDrawer && <Burger opened={drawerOpened} onClick={toggleDrawer} />}</div>
+          {customSpace?.center}
+          <div>
+            {customSpace?.right}
+            {itemsDrawer && <Burger opened={drawerOpened} onClick={toggleDrawer} />}
+          </div>
         </Group>
       </Header>
 

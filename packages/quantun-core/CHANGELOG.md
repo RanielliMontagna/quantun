@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.9
+
+### Patch Changes
+
+- Atualiza versoes
+
 ## 1.1.8
 
 ### Patch Changes

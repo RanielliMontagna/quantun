@@ -3,9 +3,7 @@ import { rem } from '@mantine/core'
 
 export const RegisterContainer = styled.div`
   display: flex;
-  height: 100vh;
   color: ${({ theme }) => theme.white};
-  overflow: auto;
   min-height: 500px;
 
   > div {
@@ -43,9 +41,13 @@ export const RegisterContainer = styled.div`
 export const LeftSide = styled.div`
   justify-content: space-around;
   background-color: ${({ theme }) => theme.colors.dark[7]};
+  overflow: auto;
+  height: 100vh;
 
   img {
+    width: 100%;
     max-width: 400px;
+    max-height: 400px;
   }
 
   @media (max-height: 800px) {
@@ -57,6 +59,8 @@ export const LeftSide = styled.div`
 
 export const RightSide = styled.div`
   justify-content: space-between;
+  overflow: auto;
+  height: 100vh;
 
   > div {
     display: grid;
@@ -70,6 +74,12 @@ export const RightSide = styled.div`
   a {
     color: ${({ theme }) => theme.black};
   }
+
+  @media (max-height: 800px) {
+    justify-content: flex-start;
+  }
 `
 
-export const TermosContainer = styled.div``
+export const TermosContainer = styled.div`
+  margin-top: ${rem(16)};
+`

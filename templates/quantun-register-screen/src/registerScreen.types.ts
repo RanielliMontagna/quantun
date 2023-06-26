@@ -30,4 +30,12 @@ export interface IRegisterScreenProps {
    * <RegisterScreen onRegister={(data) => console.log(data)} />
    */
   onRegister: (data: RegisterData) => void
+
+  /**
+   * Função que será executada quando o usuário clicar no botão de login.
+   *
+   * @example
+   * <RegisterScreen onLogin={() => navigate('/login')} />
+   */
+  onLogin: () => void
 }

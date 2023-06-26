@@ -50,5 +50,6 @@ export const Email: StoryObj<ILoginScreenProps> = {
   args: {
     loginType: LoginTypeEnum.EMAIL,
     onLogin: (values) => console.log('Login', values),
+    onRegister: () => alert('Register'),
   },
 }

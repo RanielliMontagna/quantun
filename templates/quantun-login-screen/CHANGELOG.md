@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 1.1.1
+
+### Patch Changes
+
+- Melhorias nos templates de login e register
+
 ## 1.1.0
 
 ### Minor Changes

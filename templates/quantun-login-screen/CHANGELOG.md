@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 1.1.0
+
+### Minor Changes
+
+- implementa novo método de login agora utilizando email
+
 ## 1.0.4
 
 ### Patch Changes

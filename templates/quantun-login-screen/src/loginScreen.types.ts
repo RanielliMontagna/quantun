@@ -1,5 +1,6 @@
 export enum LoginTypeEnum {
   GOOGLE = 0,
+  EMAIL = 1,
 }
 
 export interface ILoginScreenProps {
@@ -55,5 +56,16 @@ export interface ILoginScreenProps {
    * @example
    * <LoginScreen onLogin={() => console.log('Login realizado com sucesso!')} />
    */
-  onLogin: () => void
+  onLogin: (values?: any) => void
+
+  /**
+   * @description
+   * Função que será executada quando o usuário clicar no botão de registrar.
+   * Quando não for passado, o botão de registrar não será exibido.
+   * Se o loginType for LoginTypeEnum.GOOGLE, o botão de registrar não será exibido.
+   *
+   * @example
+   * <LoginScreen onRegister={() => console.log('Registro realizado com sucesso!')} />
+   */
+  onRegister?: () => void
 }

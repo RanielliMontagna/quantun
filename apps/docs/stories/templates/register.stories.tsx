@@ -2,12 +2,12 @@ import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 
 import { QuantunProvider } from '@quantun/core'
-import { LoginScreen, ILoginScreenProps, LoginTypeEnum } from '@quantun/login-screen'
+import { RegisterScreen, IRegisterScreenProps } from '@quantun/register-screen'
 import { Grid, Text, Title } from '@mantine/core'
 
 export default {
-  title: 'Templates/Login',
-  component: LoginScreen,
+  title: 'Templates/Register',
+  component: RegisterScreen,
   decorators: [
     (Story) => (
       <QuantunProvider theme={{}}>
@@ -16,7 +16,6 @@ export default {
     ),
   ],
   args: {
-    loginType: LoginTypeEnum.GOOGLE,
     welcomeContent: (
       <>
         <Title>Quantun</Title>
@@ -28,27 +27,19 @@ export default {
         </Grid>
       </>
     ),
-    beforeLoginContent: (
+    beforeRegisterContent: (
       <>
-        <Title order={3}>Bem vindo ao Quantun!</Title>
+        <Title order={3}>Cadastre-se</Title>
         <Text size="sm" color="gray.6">
-          Para continuar, faça login com sua conta do Google.
+          Preencha os campos abaixo para criar sua conta.
         </Text>
       </>
     ),
   },
-} as Meta<ILoginScreenProps>
+} as Meta<IRegisterScreenProps>
 
-export const Google: StoryObj<ILoginScreenProps> = {
+export const Default: StoryObj<IRegisterScreenProps> = {
   args: {
-    loginType: LoginTypeEnum.GOOGLE,
-    onLogin: () => console.log('Login'),
-  },
-}
-
-export const Email: StoryObj<ILoginScreenProps> = {
-  args: {
-    loginType: LoginTypeEnum.EMAIL,
-    onLogin: (values) => console.log('Login', values),
+    onRegister: (data) => console.log(data),
   },
 }

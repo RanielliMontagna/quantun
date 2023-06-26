@@ -12,16 +12,19 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mantine/core": "^6.0.6",
+    "@mantine/form": "^6.0.14",
     "@mantine/hooks": "^6.0.6",
     "@mantine/notifications": "^6.0.6",
     "@quantun/core": "workspace:*",
     "@quantun/hooks": "workspace:*",
     "@quantun/login-screen": "workspace:*",
+    "@quantun/register-screen": "workspace:*",
     "@quantun/utils": "workspace:*",
     "@tabler/icons-react": "^2.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@quantun/eslint": "workspace:*",

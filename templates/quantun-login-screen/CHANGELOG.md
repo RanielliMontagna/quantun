@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 1.1.2
+
+### Patch Changes
+
+- refaz estilização das telas de login e registro
+
 ## 1.1.1
 
 ### Patch Changes

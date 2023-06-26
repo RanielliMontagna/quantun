@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { MantineProvider, Text, TextInput, Button } from '@mantine/core'
+import { MantineProvider, Text, TextInput, Button, useMantineTheme } from '@mantine/core'
 import { useForm, zodResolver } from '@mantine/form'
 
 import { LeftSide, RegisterContainer, RightSide, TermosContainer } from './registerScreen.styles'
@@ -13,6 +13,8 @@ export function RegisterScreen({
   onRegister,
   onLogin,
 }: IRegisterScreenProps) {
+  const theme = useMantineTheme()
+
   const form = useForm({
     initialValues: {
       name: '',
@@ -27,11 +29,17 @@ export function RegisterScreen({
     <RegisterContainer>
       {welcomeContent && <LeftSide>{welcomeContent}</LeftSide>}
       <RightSide>
-        <div></div>
         <div>
           {beforeRegisterContent && <div>{beforeRegisterContent}</div>}
           <div>
-            <MantineProvider withGlobalStyles withNormalizeCSS>
+            <MantineProvider
+              withGlobalStyles
+              withNormalizeCSS
+              theme={{
+                ...theme,
+                colorScheme: 'light',
+              }}
+            >
               <form
                 onSubmit={form.onSubmit(onRegister)}
                 style={{

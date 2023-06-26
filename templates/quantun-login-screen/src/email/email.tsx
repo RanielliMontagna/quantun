@@ -2,7 +2,7 @@ import React from 'react'
 import { z } from 'zod'
 
 import { useForm, zodResolver } from '@mantine/form'
-import { TextInput, Button, MantineProvider } from '@mantine/core'
+import { TextInput, Button, MantineProvider, useMantineTheme } from '@mantine/core'
 import { ILoginScreenProps } from '../loginScreen.types'
 
 interface IEmailProps {
@@ -16,6 +16,8 @@ const loginSchema = z.object({
 })
 
 export function Email({ onLogin, onRegister }: IEmailProps) {
+  const theme = useMantineTheme()
+
   const form = useForm({
     initialValues: {
       email: '',
@@ -25,7 +27,14 @@ export function Email({ onLogin, onRegister }: IEmailProps) {
   })
 
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        ...theme,
+        colorScheme: 'light',
+      }}
+    >
       <form
         onSubmit={form.onSubmit((values) => {
           onLogin(values)

@@ -36,8 +36,19 @@ export default {
         </Text>
       </>
     ),
-    onLogin: () => console.log('Login'),
   },
 } as Meta<ILoginScreenProps>
 
-export const Default: StoryObj<ILoginScreenProps> = {}
+export const Google: StoryObj<ILoginScreenProps> = {
+  args: {
+    loginType: LoginTypeEnum.GOOGLE,
+    onLogin: () => console.log('Login'),
+  },
+}
+
+export const Email: StoryObj<ILoginScreenProps> = {
+  args: {
+    loginType: LoginTypeEnum.EMAIL,
+    onLogin: (values) => console.log('Login', values),
+  },
+}

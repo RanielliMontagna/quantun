@@ -11,8 +11,20 @@ export const LoginContainer = styled.div`
   > div {
     display: flex;
     flex-direction: column;
-    padding: ${rem(32)} ${rem(64)};
+    padding: ${rem(128)} ${rem(128)};
     gap: ${rem(32)};
+
+    @media (max-height: 680px) {
+      padding: ${rem(64)} ${rem(64)};
+    }
+
+    @media (max-height: 500px) {
+      padding: ${rem(32)} ${rem(64)};
+    }
+
+    @media (max-width: 1200px) {
+      padding: ${rem(64)} ${rem(64)};
+    }
 
     @media (max-width: 768px) {
       padding: ${rem(32)} ${rem(32)};
@@ -21,6 +33,8 @@ export const LoginContainer = styled.div`
     @media (max-width: 480px) {
       padding: ${rem(32)} ${rem(16)};
     }
+
+    transition: all 0.3s ease-in-out;
   }
 
   @media (max-width: 768px) {

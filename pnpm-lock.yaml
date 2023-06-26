@@ -79,6 +79,9 @@ importers:
       '@quantun/login-screen':
         specifier: workspace:*
         version: link:../../templates/quantun-login-screen
+      '@quantun/register-screen':
+        specifier: workspace:*
+        version: link:../../templates/quantun-register-screen
       '@quantun/utils':
         specifier: workspace:*
         version: link:../../packages/quantun-utils
@@ -249,6 +252,55 @@ importers:
         version: 4.9.3
 
   templates/quantun-login-screen:
+    dependencies:
+      '@emotion/react':
+        specifier: '>=11.10.6'
+        version: 11.10.6(@types/react@18.0.9)(react@18.2.0)
+      '@emotion/styled':
+        specifier: '>=11.10.6'
+        version: 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.9)(react@18.2.0)
+      '@mantine/core':
+        specifier: '>=6.0.6'
+        version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.9)(react-dom@18.2.0)(react@18.2.0)
+      '@mantine/form':
+        specifier: '>=6.0.14'
+        version: 6.0.14(react@18.2.0)
+      '@quantun/core':
+        specifier: '>=1.1.9'
+        version: link:../../packages/quantun-core
+      '@tabler/icons-react':
+        specifier: '>=2.15.0'
+        version: 2.15.0(react@18.2.0)
+      react:
+        specifier: '>=18.1.0'
+        version: 18.2.0
+      zod:
+        specifier: '>=3.21.4'
+        version: 3.21.4
+    devDependencies:
+      '@quantun/eslint':
+        specifier: workspace:*
+        version: link:../../packages/quantun-eslint
+      '@quantun/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/quantun-tsconfig
+      '@types/react':
+        specifier: ^18.0.9
+        version: 18.0.9
+      '@types/react-dom':
+        specifier: ^18.0.4
+        version: 18.0.4
+      eslint:
+        specifier: ^8.15.0
+        version: 8.29.0
+      tsup:
+        specifier: ^5.10.1
+        version: 5.10.1(ts-node@10.9.1)(typescript@4.9.3)
+      typescript:
+        specifier: ^4.5.3
+        version: 4.9.3
+
+  templates/quantun-register-screen:
     dependencies:
       '@emotion/react':
         specifier: '>=11.10.6'

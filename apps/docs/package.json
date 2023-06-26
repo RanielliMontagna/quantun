@@ -18,6 +18,7 @@
     "@quantun/core": "workspace:*",
     "@quantun/hooks": "workspace:*",
     "@quantun/login-screen": "workspace:*",
+    "@quantun/register-screen": "workspace:*",
     "@quantun/utils": "workspace:*",
     "@tabler/icons-react": "^2.15.0",
     "react": "^18.2.0",

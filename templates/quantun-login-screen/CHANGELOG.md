@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 1.1.3
+
+### Patch Changes
+
+- ajusta paddings e animações das telas de login e register
+
 ## 1.1.2
 
 ### Patch Changes

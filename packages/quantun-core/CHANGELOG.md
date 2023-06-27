@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.10
+
+### Patch Changes
+
+- ajusta traduções deixando todo projeto em inglês
+
 ## 1.1.9
 
 ### Patch Changes

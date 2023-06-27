@@ -10,11 +10,13 @@
 </p>
 
 <p id="-about"></p>
+
 ## 📖 About
 
 Quantun is a monorepo for managing projects using React and Typescript.It uses [Turborepo](https://turborepo.org/) to manage the monorepo and [Storybook](https://storybook.js.org/) to manage the UI components. It was created to facilitate the creation of new projects, as well as to facilitate the maintenance of these projects.
 
 <p id="-technologies"></p>
+
 ## ⚡ Technologies
 
 Quantun uses the following technologies:
@@ -31,6 +33,7 @@ Quantun uses the following technologies:
 Also, Quantun uses [PNPM](https://pnpm.io/) as package manager.
 
 <p id="-getting-started"></p>
+
 ## 🚀 Getting started
 
 ### 📋 Install
@@ -90,7 +93,8 @@ There are two ways to publish the project:
 - Manual publication: To publish the project manually, run the command: `yarn release`
 - Automatic publication: To publish the project automatically, it is necessary to push the master branch. Github Actions will execute the publication process.
 
-<p id="-license"></p>
+<p id="-license"></p>]
+
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

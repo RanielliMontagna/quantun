@@ -12,7 +12,9 @@ export function Google({ onLogin }: IGoogleProps) {
   return (
     <>
       <Button leftIcon={<IconBrandGoogle size="18" />} onClick={onLogin}>
-        <Text size="sm">Entrar com o Google</Text>
+        <Text size="sm">
+          Sign in with <strong>Google</strong>
+        </Text>
       </Button>
     </>
   )

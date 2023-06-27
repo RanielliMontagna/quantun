@@ -11,8 +11,8 @@ interface IEmailProps {
 }
 
 const loginSchema = z.object({
-  email: z.string().email('Informe um email válido'),
-  password: z.string().min(6, 'A senha deve ter no mínimo 6 caracteres'),
+  email: z.string().email(),
+  password: z.string().min(6),
 })
 
 export function Email({ onLogin, onRegister }: IEmailProps) {
@@ -47,22 +47,22 @@ export function Email({ onLogin, onRegister }: IEmailProps) {
       >
         <TextInput
           label="Email"
-          placeholder="Informe seu email"
+          placeholder="Enter your email"
           withAsterisk
           {...form.getInputProps('email')}
         />
         <TextInput
           label="Senha"
-          placeholder="Informe sua senha"
+          placeholder="Enter your password"
           type="password"
           withAsterisk
           {...form.getInputProps('password')}
         />
         <Button type="submit" mt={8}>
-          Entrar
+          Sign in
         </Button>
         <Button variant="light" mt={8} style={{ fontWeight: 400 }} onClick={onRegister}>
-          Não tem uma conta? Cadastre-se
+          Don&apos;t have an account? Sign up
         </Button>
       </form>
     </MantineProvider>

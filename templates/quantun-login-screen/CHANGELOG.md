@@ -1,5 +1,13 @@
 # @quantun/login-screen
 
+## 1.1.4
+
+### Patch Changes
+
+- ajusta traduções deixando todo projeto em inglês
+- Updated dependencies
+  - @quantun/core@1.1.10
+
 ## 1.1.3
 
 ### Patch Changes

@@ -1,91 +1,98 @@
-# Quantun
+<h1 align="center">Quantun</h1>
 
-O Quantun é um monorepo para o gerenciamento de projetos utilizando React e Typescript.
+<p align="center">
+  <a href="#-about">About</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#-license">License</a>
+</p>
 
-## Tecnologias
+<p id="-about"></p>
+## 📖 About
 
-O Quantun utiliza as seguintes tecnologias:
+Quantun is a monorepo for managing projects using React and Typescript.It uses [Turborepo](https://turborepo.org/) to manage the monorepo and [Storybook](https://storybook.js.org/) to manage the UI components. It was created to facilitate the creation of new projects, as well as to facilitate the maintenance of these projects.
 
-- [Turborepo](https://turborepo.org/) - Gerenciador de monorepo
-- [React](https://reactjs.org/) - Biblioteca para criação de interfaces
-- [Typescript](https://www.typescriptlang.org/) - Adiciona tipagem estática ao JavaScript
-- [Storybook](https://storybook.js.org/) - Biblioteca para documentação de componentes
-- [Jest](https://jestjs.io/) - Biblioteca para testes unitários
-- [Prettier](https://prettier.io/) - Biblioteca para formatação de código
-- [ESLint](https://eslint.org/) - Biblioteca para análise de código
-- [Changesets](https://github.com/changesets/changesets) - Biblioteca para gerenciamento de versões
+<p id="-technologies"></p>
+## ⚡ Technologies
 
-Além disso, o Quantun utiliza o [PNPM](https://pnpm.io/) como gerenciador de pacotes.
+Quantun uses the following technologies:
 
-## Como utilizar
+- [Turborepo](https://turborepo.org/) - Monorepo manager
+- [React](https://reactjs.org/) - Library for building user interfaces
+- [Typescript](https://www.typescriptlang.org/) - Superset of Javascript
+- [Storybook](https://storybook.js.org/) - Library for building UI components
+- [Jest](https://jestjs.io/) - Library for testing
+- [Prettier](https://prettier.io/) - Code formatter for Javascript
+- [ESLint](https://eslint.org/) - Linter for identifying and reporting on patterns in JavaScript
+- [Changesets](https://github.com/changesets/changesets) - Library for managing changelogs and versions
 
-### Instalação
+Also, Quantun uses [PNPM](https://pnpm.io/) as package manager.
 
-Para instalar as dependências do projeto, execute o comando:
+<p id="-getting-started"></p>
+## 🚀 Getting started
+
+### 📋 Install
+
+To install the project dependencies, run the command:
 
 ```bash
 yarn
 ```
 
-### Execução
+### 🏃 Run and develop
 
-Para executar e visualizar o projeto, execute o comando:
+To run and view the project, run the command:
 
 ```bash
 yarn dev
 ```
 
-Acesse o storybook através do endereço: http://localhost:6006
+Access the storybook through the address: http://localhost:6006
 
-### Formatação
+### 📝 Format
 
-Para formatar o código, execute o comando:
+To format the code, run the command:
 
 ```bash
 yarn format
 ```
 
-### Clean
+### ☁️ Clean
 
-Para limpar o projeto, execute o comando:
+To clean the project, run the command:
 
 ```bash
 yarn clean
 ```
 
-### Testes
+### 🧪 Tests
 
-Para executar os testes, execute o comando:
+To run the tests, run the command:
 
 ```bash
 yarn test
 ```
 
-### Build
+### 🏗️ Build
 
-Para gerar o build do projeto, execute o comando:
+To generate the project build, run the command:
 
 ```bash
 yarn build
 ```
 
-### Publicação
+### 📦 Publish
 
-Há duas formas de publicar o projeto:
+There are two ways to publish the project:
 
-- Publicação manual: Para publicar o projeto manualmente, execute o comando: `yarn release`
-- Publicação automática: Para publicar o projeto automaticamente, é necessário dar push na branch master. O Github Actions irá executar o processo de publicação.
+- Manual publication: To publish the project manually, run the command: `yarn release`
+- Automatic publication: To publish the project automatically, it is necessary to push the master branch. Github Actions will execute the publication process.
 
-## Pacotes disponíveis
+<p id="-license"></p>
+## 📝 License
 
-### @quantun/core (🚧 Em desenvolvimento 🚧)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-O pacote @quantun/core é responsável por disponibilizar os componentes básicos do Quantun.
-
-### @quantun/prettier 🚀
-
-O pacote @quantun/prettier é responsável por disponibilizar as configurações do Prettier.
-
-### @quantun/tsconfig 🚀
-
-O pacote @quantun/tsconfig é responsável por disponibilizar as configurações do Typescript.
+#### Made with ❤️ by [Ranielli Montagna](https://github.com/RanielliMontagna)

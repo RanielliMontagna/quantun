@@ -32,26 +32,28 @@ export const Default: StoryObj<IAppBarProps> = {
       <AppBar
         logo={<h1>logo</h1>}
         logoDrawer="drawer"
-        customSpace={
-          <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-            <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
-              Home
-            </a>
-            <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
-              Termos de Serviço
-            </a>
-            <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
-              Política de Privacidade
-            </a>
-          </Group>
-        }
+        customSpace={{
+          center: (
+            <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
+              <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
+                Home
+              </a>
+              <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
+                Terms of Service
+              </a>
+              <a href="" className={classes.link} onClick={(e) => e.preventDefault()}>
+                Polity of Privacy
+              </a>
+            </Group>
+          ),
+        }}
         itemsDrawer={
           <>
             <LinkAppBar label="Home" icon="H" onClick={() => console.log('Home')} />
             <UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>
                 <Box component="span" mr={5}>
-                  Funcionalidades
+                  Features
                 </Box>
               </Center>
             </UnstyledButton>

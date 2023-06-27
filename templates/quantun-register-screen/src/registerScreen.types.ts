@@ -3,28 +3,28 @@ import type { RegisterData } from './registerSchema'
 export interface IRegisterScreenProps {
   /**
    * @description
-   * Conteúdo que será exibido como boas vindas ao usuário. Será exibido no lado esquerdo da tela.
+   * Content that will be displayed as a welcome to the user. It will be displayed on the left side of the screen.
    *
    * @type React.ReactNode
    *
    * @example
-   * <LoginScreen welcomeContent={<h1>Olá, seja bem vindo!</h1>} />
+   * <LoginScreen welcomeContent={<h1>Hello, welcome!</h1>} />
    */
   welcomeContent?: React.ReactNode
 
   /**
-   * Conteúdo que será exibido no lado direito da tela. Será exibido antes dos campos de registro.
+   * Content that will be displayed on the right side of the screen. It will be displayed before the registration fields.
    *
    * @type React.ReactNode
    *
    * @example
-   * <RegisterScreen beforeRegisterContent={<h1>Olá, seja bem vindo!</h1>} />
+   * <RegisterScreen beforeRegisterContent={<h1>Register</h1>} />
    */
   beforeRegisterContent?: React.ReactNode
 
   /**
-   * Função que será executada quando o usuário clicar no botão de registro.
-   * @param data Dados do formulário de registro.
+   * Function to be executed when the user clicks on the register button.
+   * @param data - Data entered by the user in the registration fields.
    *
    * @example
    * <RegisterScreen onRegister={(data) => console.log(data)} />
@@ -32,7 +32,7 @@ export interface IRegisterScreenProps {
   onRegister: (data: RegisterData) => void
 
   /**
-   * Função que será executada quando o usuário clicar no botão de login.
+   * Function to be executed when the user clicks on the login button.
    *
    * @example
    * <RegisterScreen onLogin={() => navigate('/login')} />

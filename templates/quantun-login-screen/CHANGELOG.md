@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 2.0.2
+
+### Patch Changes
+
+- atualiza templates de login e register para poderem receber valores iniciais tanto por prop como por parâmetro
+
 ## 2.0.1
 
 ### Patch Changes

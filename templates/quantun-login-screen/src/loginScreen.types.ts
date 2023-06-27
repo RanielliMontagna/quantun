@@ -1,3 +1,5 @@
+import { LoginData } from './email/email.schema'
+
 export enum LoginTypeEnum {
   GOOGLE = 0,
   EMAIL = 1,
@@ -68,4 +70,11 @@ export interface ILoginScreenProps {
    * <LoginScreen onRegister={() => console.log('Register successful!')} />
    */
   onRegister?: () => void
+
+  /**
+   * @description
+   * Initial values to be displayed on the login form. If not provided, the form will be empty.
+   * This prop is only used when the loginType is LoginTypeEnum.EMAIL.
+   */
+  initialValues?: Partial<LoginData>
 }

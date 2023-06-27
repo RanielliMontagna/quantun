@@ -46,6 +46,19 @@ export default {
       </>
     ),
   },
+  argTypes: {
+    loginType: {
+      control: {
+        type: 'select',
+        options: [LoginTypeEnum.GOOGLE, LoginTypeEnum.EMAIL],
+      },
+    },
+    initialValues: {
+      control: {
+        type: 'object',
+      },
+    },
+  },
 } as Meta<ILoginScreenProps>
 
 export const Google: StoryObj<ILoginScreenProps> = {
@@ -60,5 +73,8 @@ export const Email: StoryObj<ILoginScreenProps> = {
     loginType: LoginTypeEnum.EMAIL,
     onLogin: (values) => console.log('Login', values),
     onRegister: () => alert('Register'),
+    initialValues: {
+      email: 'teste@gmail.com',
+    },
   },
 }

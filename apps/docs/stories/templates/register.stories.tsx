@@ -51,5 +51,9 @@ export const Default: StoryObj<IRegisterScreenProps> = {
   args: {
     onRegister: (data) => console.log(data),
     onLogin: () => alert('Login'),
+    initialValues: {
+      name: 'John Doe',
+      email: 'john@doe@gmail.com',
+    },
   },
 }

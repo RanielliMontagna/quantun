@@ -1,33 +1,25 @@
 import React from 'react'
-import { z } from 'zod'
 
 import { useForm, zodResolver } from '@mantine/form'
 import { TextInput, Button, MantineProvider, useMantineTheme, PasswordInput } from '@mantine/core'
-import { ILoginScreenProps } from '../loginScreen.types'
+
+import type { ILoginScreenProps } from '../loginScreen.types'
+import { LoginData, loginSchema } from './email.schema'
 
 interface IEmailProps {
   onLogin: ILoginScreenProps['onLogin']
   onRegister: ILoginScreenProps['onRegister']
+  initialValues?: Partial<LoginData>
 }
 
-const loginSchema = z.object({
-  email: z.string().email(),
-  password: z
-    .string()
-    .min(6)
-    .max(100)
-    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/, {
-      message: 'Password must have at least 1 uppercase, 1 lowercase and 1 number',
-    }),
-})
-
-export function Email({ onLogin, onRegister }: IEmailProps) {
+export function Email({ onLogin, onRegister, initialValues }: IEmailProps) {
   const theme = useMantineTheme()
+  const params = new URLSearchParams(window.location.search)
 
   const form = useForm({
     initialValues: {
-      email: '',
-      password: '',
+      email: initialValues?.email || params.get('email') || '',
+      password: initialValues?.password || params.get('password') || '',
     },
     validate: zodResolver(loginSchema),
   })
@@ -42,14 +34,8 @@ export function Email({ onLogin, onRegister }: IEmailProps) {
       }}
     >
       <form
-        onSubmit={form.onSubmit((values) => {
-          onLogin(values)
-        })}
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 8,
-        }}
+        onSubmit={form.onSubmit(onLogin)}
+        style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
       >
         <TextInput
           label="Email"

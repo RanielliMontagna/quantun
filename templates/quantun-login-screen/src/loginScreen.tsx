@@ -13,6 +13,7 @@ export function LoginScreen({
   showTerms = true,
   welcomeContent,
   beforeLoginContent,
+  initialValues,
   onLogin,
   onRegister,
 }: ILoginScreenProps) {
@@ -22,7 +23,7 @@ export function LoginScreen({
       case LoginTypeEnum.GOOGLE:
         return <Google onLogin={onLogin} />
       case LoginTypeEnum.EMAIL:
-        return <Email onLogin={onLogin} onRegister={onRegister} />
+        return <Email onLogin={onLogin} onRegister={onRegister} initialValues={initialValues} />
     }
   }, [loginType])
 

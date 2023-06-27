@@ -13,23 +13,26 @@ import { useDisclosure } from '@mantine/hooks'
 
 import { LeftSide, RegisterContainer, RightSide, TermosContainer } from './registerScreen.styles'
 import { IRegisterScreenProps } from './registerScreen.types'
-import { registerSchema } from './registerSchema'
+import { registerSchema } from './registerScreen.schema'
 
 export function RegisterScreen({
   welcomeContent,
   beforeRegisterContent,
+  initialValues,
   onRegister,
   onLogin,
 }: IRegisterScreenProps) {
   const theme = useMantineTheme()
+  const params = new URLSearchParams(window.location.search)
+
   const [visible, { toggle }] = useDisclosure(false)
 
   const form = useForm({
     initialValues: {
-      name: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      name: initialValues?.name || params.get('name') || '',
+      email: initialValues?.email || params.get('email') || '',
+      password: initialValues?.password || params.get('password') || '',
+      confirmPassword: initialValues?.confirmPassword || params.get('confirmPassword') || '',
     },
     validate: zodResolver(registerSchema),
   })

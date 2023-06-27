@@ -1,4 +1,4 @@
-import type { RegisterData } from './registerSchema'
+import type { RegisterData } from './registerScreen.schema'
 
 export interface IRegisterScreenProps {
   /**
@@ -38,4 +38,13 @@ export interface IRegisterScreenProps {
    * <RegisterScreen onLogin={() => navigate('/login')} />
    */
   onLogin: () => void
+
+  /**
+   * @description
+   * Initial values for the registration fields.
+   * If not provided, the fields will be empty.
+   * @example
+   * <RegisterScreen initialValues={{ email: 'raniellimontagna@hotmail.com' }} />
+   */
+  initialValues?: Partial<RegisterData>
 }

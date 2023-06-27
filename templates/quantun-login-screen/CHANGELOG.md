@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 2.0.1
+
+### Patch Changes
+
+- ajusta schema de senha para validar letras maiuscula
+
 ## 2.0.0
 
 ### Major Changes

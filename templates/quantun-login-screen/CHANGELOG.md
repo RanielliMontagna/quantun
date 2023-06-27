@@ -1,5 +1,16 @@
 # @quantun/login-screen
 
+## 2.0.0
+
+### Major Changes
+
+- faz melhoria nos campos de senha nos templates de login e register
+
+### Patch Changes
+
+- Updated dependencies
+  - @quantun/core@1.1.11
+
 ## 1.1.4
 
 ### Patch Changes

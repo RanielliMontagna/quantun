@@ -1,7 +1,15 @@
 import React from 'react'
 
-import { MantineProvider, Text, TextInput, Button, useMantineTheme } from '@mantine/core'
+import {
+  MantineProvider,
+  Text,
+  TextInput,
+  Button,
+  useMantineTheme,
+  PasswordInput,
+} from '@mantine/core'
 import { useForm, zodResolver } from '@mantine/form'
+import { useDisclosure } from '@mantine/hooks'
 
 import { LeftSide, RegisterContainer, RightSide, TermosContainer } from './registerScreen.styles'
 import { IRegisterScreenProps } from './registerScreen.types'
@@ -14,6 +22,7 @@ export function RegisterScreen({
   onLogin,
 }: IRegisterScreenProps) {
   const theme = useMantineTheme()
+  const [visible, { toggle }] = useDisclosure(false)
 
   const form = useForm({
     initialValues: {
@@ -60,19 +69,22 @@ export function RegisterScreen({
                   withAsterisk
                   {...form.getInputProps('email')}
                 />
-                <TextInput
-                  label="Senha"
+                <PasswordInput
+                  label="Password"
                   placeholder="Enter your password"
-                  type="password"
                   withAsterisk
                   {...form.getInputProps('password')}
+                  visible={visible}
+                  onVisibilityChange={toggle}
                 />
-                <TextInput
+
+                <PasswordInput
                   label="Confirm password"
                   placeholder="Confirm your password"
-                  type="password"
                   withAsterisk
                   {...form.getInputProps('confirmPassword')}
+                  visible={visible}
+                  onVisibilityChange={toggle}
                 />
                 <Button type="submit" fullWidth mt={8}>
                   Register now

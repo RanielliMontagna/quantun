@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.1.11
+
+### Patch Changes
+
+- faz melhoria nos campos de senha nos templates de login e register
+
 ## 1.1.10
 
 ### Patch Changes

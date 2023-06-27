@@ -2,7 +2,7 @@ import React from 'react'
 import { z } from 'zod'
 
 import { useForm, zodResolver } from '@mantine/form'
-import { TextInput, Button, MantineProvider, useMantineTheme } from '@mantine/core'
+import { TextInput, Button, MantineProvider, useMantineTheme, PasswordInput } from '@mantine/core'
 import { ILoginScreenProps } from '../loginScreen.types'
 
 interface IEmailProps {
@@ -51,10 +51,9 @@ export function Email({ onLogin, onRegister }: IEmailProps) {
           withAsterisk
           {...form.getInputProps('email')}
         />
-        <TextInput
-          label="Senha"
+        <PasswordInput
+          label="Password"
           placeholder="Enter your password"
-          type="password"
           withAsterisk
           {...form.getInputProps('password')}
         />

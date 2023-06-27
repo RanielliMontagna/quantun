@@ -49,33 +49,33 @@ export function RegisterScreen({
                 }}
               >
                 <TextInput
-                  label="Nome"
-                  placeholder="Informe seu nome"
+                  label="Name"
+                  placeholder="Enter your name"
                   withAsterisk
                   {...form.getInputProps('name')}
                 />
                 <TextInput
                   label="Email"
-                  placeholder="Informe seu email"
+                  placeholder="Enter your email"
                   withAsterisk
                   {...form.getInputProps('email')}
                 />
                 <TextInput
                   label="Senha"
-                  placeholder="Informe sua senha"
+                  placeholder="Enter your password"
                   type="password"
                   withAsterisk
                   {...form.getInputProps('password')}
                 />
                 <TextInput
-                  label="Confirme sua senha"
-                  placeholder="Confirme sua senha"
+                  label="Confirm password"
+                  placeholder="Confirm your password"
                   type="password"
                   withAsterisk
                   {...form.getInputProps('confirmPassword')}
                 />
                 <Button type="submit" fullWidth mt={8}>
-                  Cadastrar
+                  Register now
                 </Button>
                 <Button
                   variant="light"
@@ -84,7 +84,7 @@ export function RegisterScreen({
                   style={{ fontWeight: 400 }}
                   onClick={onLogin}
                 >
-                  Já possui uma conta? <b style={{ marginLeft: 4 }}>Faça login</b>
+                  Already have an account? <b style={{ marginLeft: 4 }}>Sign in</b>
                 </Button>
               </form>
             </MantineProvider>
@@ -92,10 +92,9 @@ export function RegisterScreen({
         </div>
         <TermosContainer>
           <Text size="sm" color="gray.6">
-            Ao cadastrar, você concorda com os nossos
+            By registering, you agree to our
             <br />
-            <a href="/termos">Termos de Serviço</a> e{' '}
-            <a href="/privacidade">Política de Privacidade</a>.
+            <a href="/terms">Terms of Service</a> e <a href="/privacy">Privacy Policy</a>.
           </Text>
         </TermosContainer>
       </RightSide>

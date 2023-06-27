@@ -38,10 +38,9 @@ export function LoginScreen({
         {showTerms && (
           <TermosContainer>
             <Text size="sm" color="gray.6">
-              Ao entrar, você concorda com os nossos
+              By entering, you agree to our
               <br />
-              <a href="/termos">Termos de Serviço</a> e{' '}
-              <a href="/privacidade">Política de Privacidade</a>.
+              <a href="/terms">Terms of Service</a> e <a href="/privacy">Privacy Policy</a>.
             </Text>
           </TermosContainer>
         )}

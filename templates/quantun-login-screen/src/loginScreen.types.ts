@@ -6,10 +6,10 @@ export enum LoginTypeEnum {
 export interface ILoginScreenProps {
   /**
    * @description
-   * O tipo de login que será exibido na tela de login.
+   * The type of login to be displayed on the login screen.
    *
    * @default LoginType.GOOGLE
-   * Por padrão, o componente irá exibir o botão de login do Google.
+   * By default, the component will display the Google login button.
    *
    * @example
    * <LoginScreen loginType={LoginTypeEnum.GOOGLE} />
@@ -18,11 +18,11 @@ export interface ILoginScreenProps {
 
   /**
    * @description
-   * Quando **true**, o componente irá exibir um texto para mostrar os termos de serviço e política de privacidade.
-   * Ao clicar em Termos de Serviço irá redirecionar para '/termos' e ao clicar em Política de Privacidade irá redirecionar para '/privacidade'.
+   * When **true**, the component will display a text to show the terms of service and privacy policy
+   * Clicking on "Terms of Service" will redirect to '/terms', and clicking on "Privacy Policy" will redirect to '/privacy'.
    *
    * @default true
-   * Por padrão, o componente irá exibir o texto.
+   * By default, the component will display the text.
    *
    * @example
    * <LoginScreen showTerms={false} />
@@ -31,41 +31,41 @@ export interface ILoginScreenProps {
 
   /**
    * @description
-   * Conteúdo que será exibido como boas vindas ao usuário. Será exibido no lado esquerdo da tela.
+   * Content that will be displayed as a welcome to the user. It will be displayed on the left side of the screen.
    *
    * @type React.ReactNode
    *
    * @example
-   * <LoginScreen welcomeContent={<h1>Olá, seja bem vindo!</h1>} />
+   * <LoginScreen welcomeContent={<h1>Hello, welcome!</h1>} />
    */
   welcomeContent?: React.ReactNode
 
   /**
-   * Conteúdo que será exibido no lado direito da tela. Será exibido antes do botão de login.
+   * Content that will be displayed on the right side of the screen. It will be displayed before the login button.
    *
    * @type React.ReactNode
    *
    * @example
-   * <LoginScreen beforeLoginContent={<h1>Olá, seja bem vindo!</h1>} />
+   * <LoginScreen beforeLoginContent={<h1>Login</h1>} />
    */
   beforeLoginContent?: React.ReactNode
 
   /**
    * @description
-   * Função que será executada quando o usuário clicar no botão de login.
+   * Function to be executed when the user clicks on the login button.
    * @example
-   * <LoginScreen onLogin={() => console.log('Login realizado com sucesso!')} />
+   * <LoginScreen onLogin={() => console.log('Login successful!')} />
    */
   onLogin: (values?: any) => void
 
   /**
    * @description
-   * Função que será executada quando o usuário clicar no botão de registrar.
-   * Quando não for passado, o botão de registrar não será exibido.
-   * Se o loginType for LoginTypeEnum.GOOGLE, o botão de registrar não será exibido.
+   * Function to be executed when the user clicks on the register button.
+   * If not provided, the register button will not be displayed.
+   * If the loginType is LoginTypeEnum.GOOGLE, the register button will not be displayed.
    *
    * @example
-   * <LoginScreen onRegister={() => console.log('Registro realizado com sucesso!')} />
+   * <LoginScreen onRegister={() => console.log('Register successful!')} />
    */
   onRegister?: () => void
 }

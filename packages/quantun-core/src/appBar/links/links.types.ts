@@ -1,6 +1,6 @@
 export interface ILinksAppBarProps {
   /**
-   * Label do link.
+   * Link label.
    *
    * @example
    * <LinkAppBar label="Tutoriais" />
@@ -8,12 +8,12 @@ export interface ILinksAppBarProps {
   label: string
 
   /**
-   * Icone que será exibido ao lado do label.
+   * Icon that will be displayed next to the label.
    */
   icon?: React.ReactNode
 
   /**
-   * Descrição que será exibido no link abaixo do label.
+   * Description that will be displayed below the label.
    *
    * @example
    * <LinkAppBar description="Veja como instalar o Mantine" />
@@ -21,15 +21,15 @@ export interface ILinksAppBarProps {
   description?: string
 
   /**
-   * Função que será executada ao clicar no link.
+   * Function to be executed when the link is clicked.
    *
    * @example
-   * <LinkAppBar onClick={() => console.log('Clicou no link')} />
+   * <LinkAppBar onClick={() => console.log('Link clicked')} />
    */
   onClick: React.MouseEventHandler<HTMLButtonElement>
 
   /**
-   * Estilos customizados que serão aplicados no link.
+   * Custom styles to be applied to the link.
    *
    * @example
    * <LinkAppBar styles={{ backgroundColor: 'red' }} />

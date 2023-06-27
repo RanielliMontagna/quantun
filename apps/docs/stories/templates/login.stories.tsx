@@ -30,18 +30,18 @@ export default {
           />
         </Grid>
         <Grid style={{ gap: 8, display: 'flex', flexDirection: 'column' }}>
-          <Title order={3}>O monorepo que vai mudar sua vida de desenvolvedor</Title>
+          <Title order={3}>The monorepo that will change your developer life</Title>
           <Text size="md" color="gray.6">
-            Junte-se a nós e descubra como é fácil criar aplicações incríveis!
+            Join us and discover how easy it is to create amazing applications!
           </Text>
         </Grid>
       </>
     ),
     beforeLoginContent: (
       <>
-        <Title order={3}>Bem vindo ao Quantun!</Title>
+        <Title order={3}>Welcome to Quantun!</Title>
         <Text size="sm" color="gray.6">
-          Para continuar, faça login e aproveite todos os recursos que temos para você.
+          To continue, login and enjoy all the features we have for you.
         </Text>
       </>
     ),

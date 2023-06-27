@@ -1,6 +1,6 @@
 export interface IAppBarProps {
   /**
-   * Será exibido no canto superior esquerdo do AppBar e será usado como um link para a página inicial.
+   * It will be displayed in the top left corner of the AppBar and will be used as a link to the home page.
    *
    * @example
    * <AppBar logo={<img src="https://mantine.dev/logo.svg" alt="Mantine logo" />} />
@@ -8,8 +8,7 @@ export interface IAppBarProps {
   logo: React.ReactNode
 
   /**
-   * Será usado no canto superior direito da drawer após abrir o menu.
-   * Se não for fornecido, irá ser utilizado o logo padrão.
+   * It will be used in the top right corner of the drawer after opening the menu. If not provided, the default logo will be used.
    *
    * @example
    * <AppBar logoDrawer={<img src="https://mantine.dev/logo.svg" alt="Mantine logo" />} />
@@ -17,21 +16,21 @@ export interface IAppBarProps {
   logoDrawer?: React.ReactNode
 
   /**
-   * Espaços personalizados que podem serem adicionados ao AppBar.
+   * Custom spaces that can be added to the AppBar.
    *
    * @example
    * <AppBar customSpace={<div>Custom space</div>} />
    */
   customSpace?: {
     /**
-     * Será exibido no centro do AppBar.
+     * It will be displayed in the center of the AppBar.
      * @example
      * <AppBar customSpace={{ center: <div>Custom space</div> }} />
      */
     center?: React.ReactNode
 
     /**
-     * Será exibido no canto superior direito do AppBar.
+     * Items that will be displayed in the drawer after opening the menu.
      * @example
      * <AppBar customSpace={{ right: <div>Custom space</div> }} />
      * @example

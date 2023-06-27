@@ -29,18 +29,18 @@ export default {
           />
         </Grid>
         <Grid style={{ gap: 8, display: 'flex', flexDirection: 'column' }}>
-          <Title order={3}>O monorepo que vai mudar sua vida de desenvolvedor</Title>
+          <Title order={3}>The monorepo that will change your developer life</Title>
           <Text size="md" color="gray.6">
-            Junte-se a nós e descubra como é fácil criar aplicações incríveis!
+            Join us and discover how easy it is to create amazing applications!
           </Text>
         </Grid>
       </>
     ),
     beforeRegisterContent: (
       <>
-        <Title order={3}>Cadastre-se</Title>
+        <Title order={3}>Register now!</Title>
         <Text size="sm" color="gray.6">
-          Preencha os campos abaixo para criar sua conta.
+          Fill in the fields below to create your account.
         </Text>
       </>
     ),

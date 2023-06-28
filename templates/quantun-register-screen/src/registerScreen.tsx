@@ -109,7 +109,7 @@ export function RegisterScreen({
           <Text size="sm" color="gray.6">
             By registering, you agree to our
             <br />
-            <a href="/terms">Terms of Service</a> e <a href="/privacy">Privacy Policy</a>.
+            <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.
           </Text>
         </TermosContainer>
       </RightSide>

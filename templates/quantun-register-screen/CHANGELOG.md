@@ -1,5 +1,11 @@
 # @quantun/register-screen
 
+## 2.0.2
+
+### Patch Changes
+
+- faz pequena correção de texto nos template de login e register
+
 ## 2.0.1
 
 ### Patch Changes

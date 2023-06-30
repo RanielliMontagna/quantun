@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.2.0
+
+### Minor Changes
+
+- Implementas novos componentes (header e emptystate) e novos hoooks (useMediaQuery e useDeleteModal)
+
 ## 1.1.11
 
 ### Patch Changes

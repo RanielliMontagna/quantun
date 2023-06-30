@@ -1,5 +1,11 @@
 # @quantun/hooks
 
+## 1.1.1
+
+### Patch Changes
+
+- Ajusta import do react no arquivo do usedeletemodal
+
 ## 1.1.0
 
 ### Minor Changes

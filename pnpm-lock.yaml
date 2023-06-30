@@ -143,6 +143,9 @@ importers:
       '@emotion/react':
         specifier: '>=11.10.6'
         version: 11.10.6(@types/react@18.0.9)(react@18.2.0)
+      '@emotion/styled':
+        specifier: '>=11.10.6'
+        version: 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.9)(react@18.2.0)
       '@mantine/core':
         specifier: '>=6.0.6'
         version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.9)(react-dom@18.2.0)(react@18.2.0)
@@ -266,7 +269,7 @@ importers:
         specifier: '>=6.0.14'
         version: 6.0.14(react@18.2.0)
       '@quantun/core':
-        specifier: '>=1.1.9'
+        specifier: '>=1.1.11'
         version: link:../../packages/quantun-core
       '@tabler/icons-react':
         specifier: '>=2.15.0'
@@ -315,7 +318,7 @@ importers:
         specifier: '>=6.0.14'
         version: 6.0.14(react@18.2.0)
       '@quantun/core':
-        specifier: '>=1.1.9'
+        specifier: '>=1.1.11'
         version: link:../../packages/quantun-core
       '@tabler/icons-react':
         specifier: '>=2.15.0'

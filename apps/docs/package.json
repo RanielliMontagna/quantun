@@ -15,6 +15,7 @@
     "@mantine/form": "^6.0.14",
     "@mantine/hooks": "^6.0.6",
     "@mantine/notifications": "^6.0.6",
+    "@mantine/modals": "^6.0.15",
     "@quantun/core": "workspace:*",
     "@quantun/hooks": "workspace:*",
     "@quantun/login-screen": "workspace:*",

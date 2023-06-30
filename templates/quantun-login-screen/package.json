@@ -1,6 +1,6 @@
 {
   "name": "@quantun/login-screen",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -29,7 +29,7 @@
     "@emotion/styled": ">=11.10.6",
     "@mantine/core": ">=6.0.6",
     "@mantine/form": ">=6.0.14",
-    "@quantun/core": ">=1.1.11",
+    "@quantun/core": ">=1.2.0",
     "@tabler/icons-react": ">=2.15.0",
     "react": ">=18.1.0",
     "zod": ">=3.21.4"

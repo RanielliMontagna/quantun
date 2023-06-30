@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import { Text as TextMantine } from '@mantine/core'
 
 interface ITextProps {

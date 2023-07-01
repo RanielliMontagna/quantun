@@ -21,7 +21,7 @@ export const SidebarContainer = styled.nav<IProps>`
   padding: ${rem(16)} ${rem(8)};
   border-radius: 0 ${rem(8)} ${rem(8)} 0;
 
-  transition: all 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 
   box-shadow: ${({ theme }) => {
     if (theme.colorScheme === 'dark') {

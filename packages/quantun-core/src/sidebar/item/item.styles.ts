@@ -31,7 +31,7 @@ export const ItemContainer = styled.div<IItemContainerProps>`
   & > div:first-of-type {
     gap: ${({ expanded }) => (expanded ? '0rem' : '1rem')};
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     color: ${({ active, activecolor, theme: { colors, colorScheme } }) => {
       if (active) {

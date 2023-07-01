@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.3.3
+
+### Patch Changes
+
+- faz pequenas melhorias de estilização no header e sideba
+
 ## 1.3.2
 
 ### Patch Changes

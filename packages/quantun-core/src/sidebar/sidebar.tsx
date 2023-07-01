@@ -1,44 +1,45 @@
 import React from 'react'
-import { Center, Navbar, Stack } from '@mantine/core'
 
-import type { ISideBarProps } from './sidebar.types'
-import { ItemSidebar } from './items/items'
+import { Stack } from '@mantine/core'
+import { IconChevronsRight } from '@tabler/icons-react'
 
-export function Sidebar({ logo, items, footer }: ISideBarProps) {
-  const pathname = window.location.pathname
+import type { ISidebarRootProps } from './sidebar.types'
+import { ExpandButton, SidebarContainer } from './sidebar.styles'
+import { SidebarProvider, useSidebar } from './sidebar.context'
 
-  const links = items.map((item) => (
-    <ItemSidebar key={item.label} {...item} active={pathname === item.path} />
-  ))
+import { SidebarHeader } from './header/header'
+import { SidebarItem } from './item/item'
+import { SidebarFooterItem } from './footerItem/footerItem'
+
+function SidebarRoot({ children }: ISidebarRootProps) {
+  const { expanded, handleToggleExpand } = useSidebar()
+
+  const _childrenArray = React.Children.toArray(children)
+
+  const _header = _childrenArray.find((child) => (child as any).type === SidebarHeader)
+  const _items = _childrenArray.filter((child) => (child as any).type === SidebarItem)
+  const _footerItems = _childrenArray.filter((child) => (child as any).type === SidebarFooterItem)
 
   return (
-    <Navbar
-      height="100%"
-      width={{ base: 80 }}
-      p="md"
-      sx={({ fn, primaryColor }) => ({
-        backgroundColor: fn.variant({
-          variant: 'filled',
-          color: primaryColor,
-        }).background,
-        border: 'none',
-        overflow: 'auto',
-        '&::-webkit-scrollbar': {
-          display: 'none',
-        },
-      })}
-    >
-      <Center style={{ cursor: 'pointer' }} onClick={() => (window.location.href = '/')}>
-        {logo}
-      </Center>
-      <Navbar.Section grow mt={50}>
-        <Stack justify="center" style={{ gap: 8 }}>
-          {links}
-        </Stack>
-      </Navbar.Section>
-      {footer}
-    </Navbar>
+    <SidebarContainer expanded={expanded}>
+      <ExpandButton expanded={expanded} onClick={handleToggleExpand}>
+        <IconChevronsRight />
+      </ExpandButton>
+      {_header}
+      <Stack spacing="xl">{_items}</Stack>
+      <Stack spacing="xl">{_footerItems}</Stack>
+    </SidebarContainer>
   )
 }
 
-Sidebar.displayName = 'Sidebar'
+function SidebarRootWrapper({ children }: ISidebarRootProps) {
+  return (
+    <SidebarProvider>
+      <SidebarRoot>{children}</SidebarRoot>
+    </SidebarProvider>
+  )
+}
+
+export { SidebarRootWrapper as SidebarRoot }
+
+SidebarRoot.displayName = 'Sidebar'

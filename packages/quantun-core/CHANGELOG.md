@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.3.2
+
+### Patch Changes
+
+- Ajusta transição dentro do sidebar e exemplo do mesmo
+
 ## 1.3.1
 
 ### Patch Changes

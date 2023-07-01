@@ -12,7 +12,7 @@ import {
   IconSunMoon,
   IconTransferIn,
 } from '@tabler/icons-react'
-import { Center, Text } from '@mantine/core'
+import { Center, Flex, Text } from '@mantine/core'
 
 export default {
   title: 'Components/Sidebar',
@@ -21,15 +21,15 @@ export default {
 
 const Decorator = (Story: any, theme: 'dark' | 'light') => (
   <QuantunProvider theme={{ primaryColor: 'indigo', colorScheme: theme }}>
-    <div
-      style={{
-        height: '100vh',
-        width: '100vw',
-        backgroundColor: theme === 'dark' ? '#1A1B1E' : '#F1F3F5',
-      }}
+    <Flex
+      h="100vh"
+      w="100vw"
+      sx={({ colorScheme, colors }) => ({
+        backgroundColor: colorScheme === 'dark' ? colors.dark[7] : colors.gray[1],
+      })}
     >
       <Story />
-    </div>
+    </Flex>
   </QuantunProvider>
 )
 

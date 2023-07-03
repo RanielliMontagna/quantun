@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.3.4
+
+### Patch Changes
+
+- adiciona prop para customização da imagem no componente de emptystate
+
 ## 1.3.3
 
 ### Patch Changes

@@ -4,21 +4,20 @@ import {
   Stack,
   Title as TitleMantine,
   Image as ImageMantine,
+  ImageProps,
   Text as TextMantine,
   Flex,
   useMantineTheme,
 } from '@mantine/core'
 
-interface IImageProps {
-  src: string
-}
+interface IImageProps extends ImageProps {}
 
 interface PropsWithChildren {
   children: React.ReactNode
 }
 
-const Image = ({ src }: IImageProps) => {
-  return <ImageMantine src={src} maw={400} style={{ width: '70%' }} />
+const Image = ({ src, ...rest }: IImageProps) => {
+  return <ImageMantine {...rest} src={src} maw={400} style={{ width: '70%', ...rest.style }} />
 }
 
 const Title: FC<PropsWithChildren> = ({ children }) => {

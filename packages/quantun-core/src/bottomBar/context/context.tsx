@@ -6,9 +6,13 @@ export const BottomBarContext = React.createContext({} as IBottomBarContext)
 
 interface IBottomBarProviderProps {
   children: React.ReactNode
+  highlightColor: string
 }
 
-export const BottomBarProvider: React.FC<IBottomBarProviderProps> = ({ children }) => {
+export const BottomBarProvider: React.FC<IBottomBarProviderProps> = ({
+  children,
+  highlightColor,
+}) => {
   const [items, setItems] = React.useState<React.ReactElement[]>([])
   const [hasMenu, setHasMenu] = React.useState(false)
   const [isMenuOpened, _setIsMenuOpened] = React.useState(false)
@@ -32,6 +36,7 @@ export const BottomBarProvider: React.FC<IBottomBarProviderProps> = ({ children 
         menuRef,
         items,
         hasMenu,
+        highlightColor,
         toggleMenu,
         setItems,
         setHasMenu,

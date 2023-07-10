@@ -6,8 +6,8 @@ import type { MenuProps } from './menu.types'
 import { useBottomBarContext } from '../context/context'
 import MenuItem from './menuItem/menuItem'
 
-export function Menu({ header, highlightcolor }: MenuProps) {
-  const { items, menuRef } = useBottomBarContext()
+export function Menu({ header }: MenuProps) {
+  const { items, menuRef, highlightColor } = useBottomBarContext()
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -17,7 +17,7 @@ export function Menu({ header, highlightcolor }: MenuProps) {
 
   return (
     <MenuContainer ref={menuRef}>
-      <MenuHeaderContainer highlightcolor={highlightcolor}>{header}</MenuHeaderContainer>
+      <MenuHeaderContainer highlightcolor={highlightColor}>{header}</MenuHeaderContainer>
       <nav>
         {items.slice(3).map((item, index) => {
           return (
@@ -26,6 +26,7 @@ export function Menu({ header, highlightcolor }: MenuProps) {
               icon={item.props.icon}
               onPress={item.props.onPress}
               path={item.props.path}
+              selected={item.props.selected}
             >
               {item.props.children}
             </MenuItem>

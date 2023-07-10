@@ -8,6 +8,7 @@ import {
   IconCategory,
   IconDashboard,
   IconKeyboardHide,
+  IconLogout,
   IconSettings,
   IconTransferIn,
 } from '@tabler/icons-react'
@@ -56,6 +57,11 @@ const items = [
     icon: IconSettings,
     label: 'Settings',
     path: '/settings',
+    selected: true,
+  },
+  {
+    icon: IconLogout,
+    label: 'Logout',
   },
   {
     icon: IconKeyboardHide,
@@ -69,7 +75,7 @@ export const Light: StoryObj = {
   decorators: [(Story) => Decorator(Story, 'light')],
   render: () => {
     return (
-      <BottomBar>
+      <BottomBar highlightColor="red">
         {items.map((item) => (
           <BottomBar.Item
             key={item.label}
@@ -92,7 +98,7 @@ export const Dark: StoryObj = {
   decorators: [(Story) => Decorator(Story, 'dark')],
   render: () => {
     return (
-      <BottomBar>
+      <BottomBar highlightColor="red">
         {items.map((item) => (
           <BottomBar.Item
             key={item.label}

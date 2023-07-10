@@ -30,7 +30,6 @@ export const MenuHeaderContainer = styled.div<MenuHeaderContainerProps>`
   align-items: center;
 
   height: 50px;
-  padding-left: 25px;
   border-radius: 0px 0px 8px 8px;
 
   background-color: ${({ theme, highlightcolor }) => highlightcolor || theme.primaryColor};

@@ -9,6 +9,7 @@ import { Item } from './item/item'
 import { Menu } from './menu/menu'
 
 import { BottomBarProvider, useBottomBarContext } from './context/context'
+import { useMantineTheme } from '@mantine/core'
 
 const BottomBarWithoutMemo: React.FC<BottomBarProps> = ({ children }) => {
   const { isMenuOpened, toggleMenu, setItems, setHasMenu } = useBottomBarContext()
@@ -37,7 +38,7 @@ const BottomBarWithoutMemo: React.FC<BottomBarProps> = ({ children }) => {
           {menu ? items.slice(0, 3) : items}
 
           {!!menu && (
-            <Item icon={IconMenu2} path="" onPress={toggleMenu}>
+            <Item icon={IconMenu2} onPress={toggleMenu}>
               Menu
             </Item>
           )}
@@ -48,13 +49,17 @@ const BottomBarWithoutMemo: React.FC<BottomBarProps> = ({ children }) => {
   )
 }
 
-const BottomBarWrapper: React.FC<BottomBarProps> = (props) => (
-  <BottomBarProvider>
-    <BottomBarWithoutMemo {...props} />
-  </BottomBarProvider>
-)
+const BottomBarWrapper: React.FC<BottomBarProps> = (props) => {
+  const { colors } = useMantineTheme()
 
-const BottomBar = React.memo(BottomBarWrapper) as React.NamedExoticComponent<BottomBarProps> & {
+  return (
+    <BottomBarProvider highlightColor={props.highlightColor || colors.blue[6]}>
+      <BottomBarWithoutMemo {...props} />
+    </BottomBarProvider>
+  )
+}
+
+const BottomBar = BottomBarWrapper as React.NamedExoticComponent<BottomBarProps> & {
   Item: React.ComponentType<React.ComponentProps<typeof Item>>
   Menu: React.ComponentType<React.ComponentProps<typeof Menu>>
 }

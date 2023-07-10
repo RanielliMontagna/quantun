@@ -11,3 +11,5 @@ export { type IAppBarProps } from './appBar/appBar.types'
 
 export { EmptyState } from './emptyState/emptyState'
 export { Header } from './header/header'
+
+export { BottomBar } from './bottomBar/bottomBar'

@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.4.0
+
+### Minor Changes
+
+- Implementa novo componente chamado bottom bar
+
 ## 1.3.4
 
 ### Patch Changes

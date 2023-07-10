@@ -8,4 +8,11 @@ export interface IBottomBarContext {
 
   hasMenu: boolean
   setHasMenu: React.Dispatch<React.SetStateAction<boolean>>
+
+  /**
+   * The highlight color of the bottom bar menu
+   *
+   * @default theme.colors.blue[6]
+   */
+  highlightColor: string
 }

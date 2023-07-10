@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, useMantineTheme } from '@mantine/core'
+import { Flex, Text } from '@mantine/core'
 import { IconChevronRight } from '@tabler/icons-react'
 
 import type { MenuItemProps } from './menuItem.types'
@@ -8,14 +8,14 @@ import { MenuItemChevronContainer, MenuItemContainer } from './menuItem.styles'
 import { useBottomBarContext } from '../../context/context'
 
 const MenuItem: React.FC<MenuItemProps> = ({
-  icon: Icon,
   children,
   last,
+  path,
+  selected,
+  icon: Icon,
   onPress,
-  activecolor,
 }) => {
-  const { colors } = useMantineTheme()
-  const { toggleMenu } = useBottomBarContext()
+  const { toggleMenu, highlightColor } = useBottomBarContext()
 
   const onPressItem = (event: React.MouseEvent<HTMLDivElement>) => {
     onPress(event)
@@ -23,20 +23,31 @@ const MenuItem: React.FC<MenuItemProps> = ({
     toggleMenu()
   }
 
+  const getIsSelected = () => {
+    if (selected) return true
+
+    const treatedPath = window.location.pathname.replace(/[/#]/, '')
+
+    return treatedPath === path
+  }
+
   return (
     <MenuItemContainer
       onClick={onPressItem}
       showDivider={last !== children}
-      activecolor={activecolor || colors.blue[6]}
+      activecolor={highlightColor}
+      selected={getIsSelected()}
     >
       <Flex gap="xs" align="center">
         <Icon size={20} />
         <Text>{children}</Text>
       </Flex>
 
-      <MenuItemChevronContainer activecolor={activecolor || colors.blue[6]}>
-        <IconChevronRight size={24} />
-      </MenuItemChevronContainer>
+      {path && (
+        <MenuItemChevronContainer activecolor={highlightColor} selected={getIsSelected()}>
+          <IconChevronRight size={24} />
+        </MenuItemChevronContainer>
+      )}
     </MenuItemContainer>
   )
 }

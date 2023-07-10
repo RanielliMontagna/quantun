@@ -30,7 +30,7 @@ export interface ItemProps {
    * @example
    * <Item path="/home" />
    */
-  path: string
+  path?: string
 
   /**
    * If true, the item will be hidden.
@@ -65,16 +65,4 @@ export interface ItemProps {
    * <Item onPress={() => console.log('Item clicado')} />
    */
   onPress: (event: MouseEvent<HTMLDivElement>) => void
-
-  /**
-   * The color that will be used when the item is selected.
-   * @type {string}
-   *
-   * @memberof ItemProps
-   * @default theme.colors.blue[6]
-   *
-   * @example
-   * <Item activecolor="#000" />
-   */
-  activecolor?: string
 }

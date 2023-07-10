@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.4.1
+
+### Patch Changes
+
+- faz melhorias gerais na bottom bar do sistema
+
 ## 1.4.0
 
 ### Minor Changes

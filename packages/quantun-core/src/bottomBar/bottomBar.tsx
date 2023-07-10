@@ -29,7 +29,7 @@ const BottomBarWithoutMemo: React.FC<BottomBarProps> = ({ children }) => {
   React.useEffect(() => {
     setItems(items)
     if (menu) setHasMenu(true)
-  }, [])
+  }, [isMenuOpened])
 
   return (
     <>

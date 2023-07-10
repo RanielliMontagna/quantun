@@ -97,6 +97,12 @@ export const Light: StoryObj = {
 export const Dark: StoryObj = {
   decorators: [(Story) => Decorator(Story, 'dark')],
   render: () => {
+    const [example, setExample] = React.useState({
+      icon: IconDashboard,
+      label: 'Example',
+      path: '/example',
+    })
+
     return (
       <BottomBar highlightColor="red">
         {items.map((item) => (
@@ -111,6 +117,13 @@ export const Dark: StoryObj = {
             {item.label}
           </BottomBar.Item>
         ))}
+        <BottomBar.Item
+          icon={example.icon}
+          onPress={() => setExample({ ...example, icon: IconSettings })}
+          path={example.path}
+        >
+          {example.label}
+        </BottomBar.Item>
         <BottomBar.Menu header="User" />
       </BottomBar>
     )

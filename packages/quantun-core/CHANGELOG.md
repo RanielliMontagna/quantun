@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.4.2
+
+### Patch Changes
+
+- Corrige pequeno bug que ocasionava em não atualizar items do menu
+
 ## 1.4.1
 
 ### Patch Changes

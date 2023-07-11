@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.5.0
+
+### Minor Changes
+
+- implementa novo componente chamado fab button
+
 ## 1.4.2
 
 ### Patch Changes

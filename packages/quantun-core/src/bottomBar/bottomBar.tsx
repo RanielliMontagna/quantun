@@ -14,7 +14,7 @@ import { useMantineTheme } from '@mantine/core'
 const BottomBarWithoutMemo: React.FC<BottomBarProps> = ({ children }) => {
   const { isMenuOpened, toggleMenu, setItems, setHasMenu } = useBottomBarContext()
 
-  // Necessáro fazer isso para que consiga ser passado array de children para o componente
+  // Necessário fazer isso para que consiga ser passado array de children para o componente
   const allChildren = React.useMemo(
     () => React.Children.toArray(children),
     [children],

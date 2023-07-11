@@ -13,3 +13,5 @@ export { EmptyState } from './emptyState/emptyState'
 export { Header } from './header/header'
 
 export { BottomBar } from './bottomBar/bottomBar'
+
+export { Fab } from './fab'

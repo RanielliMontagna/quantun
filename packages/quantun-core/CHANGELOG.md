@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.5.1
+
+### Patch Changes
+
+- ajusta importação do react no arquivo de botão do fab
+
 ## 1.5.0
 
 ### Minor Changes

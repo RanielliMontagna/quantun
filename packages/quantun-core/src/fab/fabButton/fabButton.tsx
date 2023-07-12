@@ -1,3 +1,4 @@
+import React from 'react'
 import { IconPlus } from '@tabler/icons-react'
 import { Text } from '@mantine/core'
 

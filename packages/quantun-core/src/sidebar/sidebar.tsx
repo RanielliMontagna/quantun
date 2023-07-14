@@ -4,7 +4,7 @@ import { Stack } from '@mantine/core'
 import { IconChevronsRight } from '@tabler/icons-react'
 
 import type { ISidebarRootProps } from './sidebar.types'
-import { ExpandButton, SidebarContainer } from './sidebar.styles'
+import { ExpandButton, SidebarContainer, SidebarWrapper } from './sidebar.styles'
 import { SidebarProvider, useSidebar } from './sidebar.context'
 
 import { SidebarHeader } from './header/header'
@@ -21,14 +21,20 @@ function SidebarRoot({ children }: ISidebarRootProps) {
   const _footerItems = _childrenArray.filter((child) => (child as any).type === SidebarFooterItem)
 
   return (
-    <SidebarContainer expanded={expanded}>
+    <SidebarWrapper expanded={expanded}>
       <ExpandButton expanded={expanded} onClick={handleToggleExpand}>
         <IconChevronsRight />
       </ExpandButton>
-      {_header}
-      <Stack spacing="xl">{_items}</Stack>
-      <Stack spacing="xl">{_footerItems}</Stack>
-    </SidebarContainer>
+      <SidebarContainer expanded={expanded}>
+        {_header}
+        <Stack spacing="xl" mt={8}>
+          {_items}
+        </Stack>
+        <Stack spacing="xl" mt={16}>
+          {_footerItems}
+        </Stack>
+      </SidebarContainer>
+    </SidebarWrapper>
   )
 }
 

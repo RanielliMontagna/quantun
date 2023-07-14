@@ -23,7 +23,7 @@ export function SidebarItem({
   const pathname = window?.location?.pathname
 
   return (
-    <Tooltip label={label} position="right" withArrow disabled={expanded}>
+    <Tooltip label={label} position="right" withArrow disabled={expanded} withinPortal>
       <ItemContainer
         onClick={onClick}
         expanded={expanded}

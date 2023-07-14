@@ -12,7 +12,7 @@ export function SidebarFooterItem({ icon: Icon, label, onClick, hide }: ISidebar
   if (hide) return null
 
   return (
-    <Tooltip label={label} position="right" withArrow disabled={expanded}>
+    <Tooltip label={label} position="right" withArrow disabled={expanded} withinPortal>
       <FooterItemContainer onClick={onClick} expanded={expanded}>
         <Flex align="center">
           <Center className="iconButton">

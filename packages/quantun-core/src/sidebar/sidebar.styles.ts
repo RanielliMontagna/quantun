@@ -5,8 +5,23 @@ interface IProps {
   expanded: boolean
 }
 
+export const SidebarWrapper = styled.div<IProps>`
+  position: relative;
+  height: 100%;
+  width: ${({ expanded }) => (expanded ? rem(200) : rem(70))};
+  transition: width 0.3s ease-in-out;
+`
+
 export const SidebarContainer = styled.nav<IProps>`
   position: relative;
+  overflow: auto;
+  height: 100%;
+
+  /* scroll invisible */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 
   user-select: none;
   -webkit-user-select: none;
@@ -17,7 +32,6 @@ export const SidebarContainer = styled.nav<IProps>`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 100%;
   padding: ${rem(16)} ${rem(8)};
   border-radius: 0 ${rem(8)} ${rem(8)} 0;
 
@@ -38,10 +52,15 @@ export const SidebarContainer = styled.nav<IProps>`
       return `linear-gradient(180deg, ${theme.white} 0%, ${theme.colors.gray[1]} 100%)`
     }
   }};
+
+  @media (max-height: 600px) {
+    display: block;
+  }
 `
 
 export const ExpandButton = styled.button<IProps>`
   position: absolute;
+  z-index: 1;
   top: ${rem(64)};
   right: ${rem(-16)};
 

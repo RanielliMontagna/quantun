@@ -1,13 +1,11 @@
 import React, { FC } from 'react'
-import { Text } from '@mantine/core'
+import { Text, TextProps } from '@mantine/core'
 
-interface ISubtitleProps {
-  children: React.ReactNode
-}
+interface ISubtitleProps extends TextProps {}
 
-export const Subtitle: FC<ISubtitleProps> = ({ children }) => {
+export const Subtitle: FC<ISubtitleProps> = ({ children, ...rest }) => {
   return (
-    <Text size="xs" color="gray.6">
+    <Text size="xs" color="gray.6" {...rest}>
       {children}
     </Text>
   )

@@ -1,15 +1,13 @@
-import React, { FC } from 'react'
+import React, { FC, HTMLAttributes } from 'react'
 import { SHeader } from './styles'
 
 import { Title } from './title/title'
 import { RightSection } from './rightSection/rightSection'
 import { Subtitle } from './subtitle/subtitle'
 
-interface IHeaderProps {
-  children: React.ReactNode
-}
+interface IHeaderProps extends HTMLAttributes<HTMLHeadElement> {}
 
-const HeaderWithoutMemo: FC<IHeaderProps> = ({ children }) => {
+const HeaderWithoutMemo: FC<IHeaderProps> = ({ children, ...rest }) => {
   const _childrenArray = React.Children.toArray(children)
 
   const _title = _childrenArray.find((child) => (child as any).type === Title)
@@ -17,7 +15,7 @@ const HeaderWithoutMemo: FC<IHeaderProps> = ({ children }) => {
   const _rightSection = _childrenArray.find((child) => (child as any).type === RightSection)
 
   return (
-    <SHeader>
+    <SHeader {...rest}>
       <div>
         {_title}
         {_subtitle}

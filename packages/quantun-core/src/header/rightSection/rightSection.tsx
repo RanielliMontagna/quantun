@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
-import { Flex } from '@mantine/core'
+import { Flex, FlexProps } from '@mantine/core'
 
-interface IRightSectionProps {
-  children: React.ReactNode
-}
+interface IRightSectionProps extends FlexProps {}
 
-export const RightSection: FC<IRightSectionProps> = ({ children }) => {
-  return <Flex gap={16}>{children}</Flex>
+export const RightSection: FC<IRightSectionProps> = ({ children, ...rest }) => {
+  return (
+    <Flex gap={16} {...rest}>
+      {children}
+    </Flex>
+  )
 }

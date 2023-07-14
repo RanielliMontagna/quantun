@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.5.2
+
+### Patch Changes
+
+- Faz melhorias gerais de estilizao na sidebar
+
 ## 1.5.1
 
 ### Patch Changes

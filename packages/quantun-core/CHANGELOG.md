@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.5.3
+
+### Patch Changes
+
+- melhora customização do componente header
+
 ## 1.5.2
 
 ### Patch Changes

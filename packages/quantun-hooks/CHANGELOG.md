@@ -1,5 +1,11 @@
 # @quantun/hooks
 
+## 1.2.0
+
+### Minor Changes
+
+- altera lint de todo projeto e nova estrutura de testes utilizando vitest
+
 ## 1.1.1
 
 ### Patch Changes

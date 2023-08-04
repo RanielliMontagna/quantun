@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.6.0
+
+### Minor Changes
+
+- altera lint de todo projeto e nova estrutura de testes utilizando vitest
+
 ## 1.5.3
 
 ### Patch Changes

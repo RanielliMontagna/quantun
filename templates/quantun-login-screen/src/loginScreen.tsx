@@ -19,7 +19,6 @@ export function LoginScreen({
 }: ILoginScreenProps) {
   const _loginTypeRender = useMemo(() => {
     switch (loginType) {
-      default:
       case LoginTypeEnum.GOOGLE:
         return <Google onLogin={onLogin} />
       case LoginTypeEnum.EMAIL:

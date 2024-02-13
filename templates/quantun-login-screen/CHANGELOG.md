@@ -1,5 +1,11 @@
 # @quantun/login-screen
 
+## 2.1.1
+
+### Patch Changes
+
+- Ajusta mensagem na tela de login ao errar a senha
+
 ## 2.1.0
 
 ### Patch Changes

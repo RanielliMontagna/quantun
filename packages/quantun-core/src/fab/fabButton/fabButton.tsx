@@ -6,7 +6,7 @@ import type { IFabButtonProps } from '../fab.types'
 import { FabSecondaryButton } from '../fab.styles'
 import { useFab } from '../fab.context'
 
-export function FabButton({ onPress, icon: Icon, label, style }: IFabButtonProps) {
+export function FabButton({ onPress, icon: Icon, label, ...rest }: IFabButtonProps) {
   const { highlightColor, handleToggleIsOpen } = useFab()
 
   function onPressWrapper() {
@@ -15,7 +15,11 @@ export function FabButton({ onPress, icon: Icon, label, style }: IFabButtonProps
   }
 
   return (
-    <FabSecondaryButton onClick={onPressWrapper} highlightColor={highlightColor} style={style}>
+    <FabSecondaryButton
+      onClick={onPressWrapper}
+      highlightColor={rest.highlightColor || highlightColor}
+      style={rest.style}
+    >
       <Text size="sm" className="text">
         {label}
       </Text>

@@ -67,6 +67,15 @@ export interface IFabButtonProps {
   label: string
 
   /**
+   * The color to use as background for the button
+   * @default highlightColor from Fab
+   *
+   * @example
+   * <Fab.Button highlightColor="red" />
+   */
+  highlightColor?: string
+
+  /**
    * Styles to apply to the button
    * @default undefined
    *

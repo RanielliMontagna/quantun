@@ -1,5 +1,11 @@
 # @quantun/core
 
+## 1.6.1
+
+### Patch Changes
+
+- Ajusta componente FAB para poder personalizar a cor de um botão em específico além do conjunto como um todo
+
 ## 1.6.0
 
 ### Minor Changes
